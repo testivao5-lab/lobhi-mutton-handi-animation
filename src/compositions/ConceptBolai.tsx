@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill} from 'remotion';
 import {loadFont} from '@remotion/google-fonts/NotoSansBengali';
 import {DirectionPanel, ConceptSpec} from '../components/characters/ConceptSheet';
-import {INK} from '../three/ink';
+import {INK} from '../config/style';
 
 const {fontFamily} = loadFont();
 

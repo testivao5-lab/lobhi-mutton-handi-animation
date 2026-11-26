@@ -37,7 +37,7 @@ jobs:
           mkdir -p stills
           IFS=',' read -ra FS <<< "${{ github.event.inputs.frames }}"
           for F in "${FS[@]}"; do
-            npx remotion still "${{ github.event.inputs.composition }}" "stills/f${F}.png" --frame="$F" --scale=0.5 --gl=swangle --chromium-flags='{"enable-unsafe-swiftshader": true}' --timeout=120000
+            npx remotion still "${{ github.event.inputs.composition }}" "stills/f${F}.png" --frame="$F" --scale=0.5 --timeout=120000
           done
           ls -la stills/
 

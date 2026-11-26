@@ -44,8 +44,8 @@ Character designs, character voices, test clips, and major backgrounds require e
 
 The repository is public. No tokens, keys or credentials are ever committed; `validate.yml` scans every push for credential-like strings. CI uses only the built-in `GITHUB_TOKEN` with minimal `contents: read` permissions.
 
-## Production style (MASTER ADDENDUM 2026-11-26)
-- SKILL.md house style MANDATORY: procedural 3D worlds (three.js, painted flat colours, ink #351f22, 3-band toon) + 2D flat-shaded cartoon cast projected inside the 3D world; camera moves in every shot; everything driven by the Remotion frame.
-- ZERO generative AI images. All art is code (SVG, procedural geometry, canvas-painted textures).
-- Rendering: GitHub Actions ubuntu-latest with --gl=swiftshader (software WebGL). VO (owner-locked) is timing master.
-- Docs: docs/ART_DIRECTION_BIBLE.md, docs/CAMERA_PLAN.md, docs/CHARACTER_RIG_DOCUMENTATION.md, docs/ENVIRONMENT_BIBLE.md, docs/PROP_BIBLE.md, docs/SCENE_BREAKDOWN.md, docs/ANIMATION_PLAN.md, docs/QUALITY_CONTROL_REPORT.md, docs/RENDER_REPORT.md, docs/STRICT-RULES.md.
+## Production style (owner decree 2026-11-26 — SUPERSEDES the 3D addendum)
+- **2D animation, 100% code-based in Remotion (React + TypeScript)** — SVG/React characters, scenes, props. The 3D skill is REMOVED from the plan; no three.js.
+- ZERO generative AI images. Design-first: cast concept sheets, environment designs and prop sheets are owner-approved BEFORE animation.
+- Rendering: GitHub Actions ubuntu-latest. VO (owner-locked) is the timing master.
+- Current rules: docs/STRICT-RULES.md. Design research: research/REFERENCE-BOARD.md.

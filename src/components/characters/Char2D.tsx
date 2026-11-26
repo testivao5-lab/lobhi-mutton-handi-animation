@@ -1,5 +1,5 @@
 import React from 'react';
-import {INK} from '../../three/ink';
+import {INK} from '../../config/style';
 
 /*
  * Char2D — skill house style: 2D flat-shaded cartoon people standing inside

@@ -1,5 +1,5 @@
 import React from 'react';
-import {INK} from '../../three/ink';
+import {INK} from '../../config/style';
 
 /*
  * Gate 2 — concept DESIGN PROPOSAL sheets (code-rendered, no AI images).

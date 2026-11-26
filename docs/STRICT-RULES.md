@@ -1,40 +1,37 @@
-# ⛔ STRICT RULES — NEVER VIOLATE (owner decree, 2026-11-26)
+# ⛔ STRICT RULES — NEVER VIOLATE (owner decree, current as of 2026-11-26 evening)
 
-## RULE 1 — NO GENERATIVE AI, EVER (ABSOLUTE)
+## RULE 1 — 2D CODE-BASED ANIMATION ONLY (ABSOLUTE, supersedes the 3D addendum)
+- **The 3D skill (`animated-3d-story-video` / SKILL.md) is REMOVED from the plan entirely** —
+  owner verdict: implementing it degraded quality. Do not reintroduce three.js, 3D worlds,
+  SwiftShader/WebGL pipelines, or the SKILL's vertical-video/camera rules.
+- Production is **2D animation, 100% code-based, inside Remotion (React + TypeScript)**:
+  characters, scenes, props, effects = hand-authored SVG/React components animated by code.
+- Every motion, timing, camera-like framing move, transition and effect = Remotion code.
+  No external editors, no pre-rendered segments.
 
-**Generative AI is NEVER used in this production. Not for visuals, not for art, not for assets. Never.**
+## RULE 2 — NO GENERATIVE AI, EVER
+- No AI-generated images/videos anywhere (characters, backgrounds, props, textures).
+- Web photo references for observation are allowed; production art is authored in code.
 
-- Every character, background, prop, food item, effect and texture is **drawn 100% in code**
-  (SVG shapes, gradients, paths, filters inside Remotion React/TypeScript).
-- No AI-generated images anywhere in the pipeline — not as backgrounds, not as sprites,
-  not as reference files in the repo. AI image files were purged from the repo on 2026-11-26.
-- Previously approved AI design sheets are VOIDED as assets. Their locked design
-  attributes (colors, outfits, features in `docs/character-bible.md`) remain as the
-  written specification for the code-drawn art.
+## RULE 3 — DESIGN FIRST, THEN ANIMATION (owner directive, current)
+- Show **character designs and ALL designs** (cast concept sheets, environment designs,
+  prop sheets) and get explicit owner approval BEFORE building animation.
+- One character at a time: 3 concept directions → owner picks → rig + expression/walk
+  preview → owner approves → lock. Locked designs never change silently.
 
-## RULE 2 — Remotion code-based animation (ABSOLUTE)
+## RULE 4 — Cloud-only rendering
+GitHub Actions ubuntu-latest only. Local ffmpeg/heavy render absent by design.
 
-- All animation, motion, timing, camera, effects, compositing = **Remotion code**.
-- No external editors, no pre-rendered video segments, no third-party render paths.
-- Remotion is the only render engine for every frame (tests, scenes, final).
+## RULE 5 — Voice is the timing master
+Owner-locked voices (docs/voice-bible.md) drive the timeline; never cut dialogue.
 
-## RULE 3 — Cloud-only rendering
+## RULE 6 — Subtitles separate
+Never burned into MP4; separate Bengali SRT.
 
-All rendering on GitHub Actions `ubuntu-latest`. Never render the film locally.
-
-## RULE 4 — Voice is the timing master
-
-Bengali VO (owner-selected & locked voices, `src/config/voices.ts`) drives the timeline.
-(Voice selection was personally approved by the owner via locked battles.)
-
-## RULE 5 — Approval gates
-
-Designs (now code-drawn), test clips, backgrounds, major changes: owner approves first.
-Selected = approved · Skipped = rejected · Silence = waiting.
-
-## RULE 6 — Subtitles stay out of the video
-
-Final MP4 is clean; `subtitles/lobhi-mutton-handi-bengali.srt` is a separate file.
+## RULE 7 — Approval gates & Drive backup
+Skipped = rejected; silence = waiting. Drive backup after every milestone with versioned names.
 
 ---
-_Violation of RULE 1 or RULE 2 is a production stopper. When in doubt: draw it in code._
+_Supersedes: the "CRITICAL MASTER ADDENDUM" 3D directive and V6 Control Brief's 3D sections._
+_Still in force from the V6 brief: approval-first workflow (§4), no debug overlays in production
+output (§8), honest QC reporting (§13), design-before-production._

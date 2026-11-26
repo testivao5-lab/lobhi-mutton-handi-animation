@@ -1,3 +1,7 @@
+# ⚠️ SUPERSEDED IN PART (2026-11-26 evening): the 3D skill was REMOVED from the plan by the owner.
+# All 3D areas (§5-§10 three.js world/camera) are historical record only. The 2D findings
+# (Char2D §1-§4), debug gating (§12), CI (§13) and story DB (§14) remain operative.
+
 # GATE 0 — SOURCE AUDIT & FILE MAP (V6 Control Brief §2 "Source audit")
 
 Branch: `v6-rebuild` (V5 preserved: main @ `3932554`). Audited 2026-11-26. TSC clean.
