@@ -227,7 +227,8 @@ const DialoguePainted: React.FC = () => {
         : 'bolai-hero-closed'
       : null;
   const expNow = frame >= CUT_C ? 'bolai-hero-proud' : sprite;
-  const expClosed = frame >= CUT_C ? 'bolai-hero-proud-closed' : 'bolai-hero-closed';
+  // proud-closed sprite pending (image budget) — closed fallback for now
+  const expClosed = 'bolai-hero-closed';
   const mouthImg = talking ? expNow : expClosed;
 
   const cutPop = interpolate(frame - (cut === 'A' ? 0 : cut === 'B' ? CUT_B : CUT_C), [0, 4], [1.02, 1], {
