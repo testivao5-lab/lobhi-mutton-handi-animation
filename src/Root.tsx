@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {MainEpisode} from './compositions/MainEpisode';
 import {TestClip} from './compositions/TestClip';
 import {StyleTest, STYLE_TEST_FRAMES} from './compositions/StyleTest';
+import {ConceptBolai} from './compositions/ConceptBolai';
 import {FPS, HEIGHT, WIDTH} from './config/constants';
 import {TOTAL_STORYBOARD_FRAMES} from './data/shots';
 import {TEST_CLIP_FRAMES} from './compositions/TestClip';
@@ -36,6 +37,15 @@ export const RemotionRoot: React.FC = () => {
         id="StyleTest"
         component={StyleTest}
         durationInFrames={STYLE_TEST_FRAMES}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+      />
+      {/* Gate 2: Bolai concept directions (design proposal still) */}
+      <Composition
+        id="ConceptBolai"
+        component={ConceptBolai}
+        durationInFrames={1}
         fps={FPS}
         width={WIDTH}
         height={HEIGHT}

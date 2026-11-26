@@ -34,3 +34,10 @@ for observation only. Board image: `research/board/reference-board-v1.png`.
 
 ## Character research (Gate 2 prep — per-character boards come with each concept)
 - Bengali rural male attire (lungi/gamcha/kurta), shopkeeper apron, dhoti drapes — to be sourced per character before each concept sheet (brief §4 step 2).
+
+## E. Character research — বলাই (Gate 2 step 2, accessed 2026-11-26)
+- Bengali man traditional dress portrait: https://www.istockphoto.com/photo/portrait-of-bangali-man-in-traditional-dress-gm1415622930-463927253 — `research/images/bengali-man-kurta-gamcha-on-shoulder-tra-1.jpg`. Note: kurta collar sit, gamcha drape option.
+- Kurta-pyjama studio portrait: https://istockphoto.com/photos/bengali-men — `...-2.jpg`. Note: kurta length proportion.
+- White kurta rural setting: https://stock.adobe.com/search?k=kurta-pajama — `...-3.jpg`. Note: rural fit/drape.
+- Cook stirring pot (occupation posture): 123rf.com/photo_11100788 — `research/images/indian-street-food-cook-apron-stirring-p-1.jpg`; commercial kitchen stir: freepixel.com/graphics/stirring-the-pot — `...-2.jpg`. Notes: working arm reach, apron silhouette.
+- OBSERVATION → DESIGN: 3 directions (A মেহনতি vendor / B কারিগর cook / C ভারী বণিক) derived from these + script arc; all stylised to house style.
