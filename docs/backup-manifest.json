@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-26T01:40:00Z",
+  "gitCommit": "3722df2",
+  "driveRoot": {
+    "name": "Lobhi Mutton Handi Animation - Production Backup",
+    "id": "1VH_pNOI0t3_50hNv6YGDFqc5Afd30FYs",
+    "url": "https://drive.google.com/drive/folders/1VH_pNOI0t3_50hNv6YGDFqc5Afd30FYs"
+  },
+  "folders": [
+    {"name": "01_Project_Source", "id": "1dIalIUdD3YmuX2scgmVHGp59HqiV1LYv"},
+    {"name": "02_Character_Designs", "id": "1qS2HqAkyW0QAHytmSg027TqNUyOVnlyy"},
+    {"name": "03_Character_Rigs", "id": "1aAROBilUJtUbCmTIU0jJHMx_7Ha5IXiQ"},
+    {"name": "04_Backgrounds", "id": "1hsyPKSiEWfdFvCQeMl0r2e-ZLa54YSsq"},
+    {"name": "05_Props", "id": "1-hbQnukPpDRk31-gTSxICkqprJynt2f9"},
+    {"name": "06_Voice_Options", "id": "1z2KVVWydyASG0DhBhhmnWyvhMlxoHhE1"},
+    {"name": "07_Approved_Voices", "id": "1fOvLs38QL56n4UQE2xUrw0FNILfvJA-H"},
+    {"name": "08_Sound_Effects", "id": "1jfZjn0cnL5hsfU_9hjazvqDfVQtKecMF"},
+    {"name": "09_Music", "id": "1E5yt0I5BnkzWlA2CXBDFjpOJsBFd1eF0"},
+    {"name": "10_Scene_Previews", "id": "16enD8XRUGKGWEiWb9xO5pRg08-QpjzKq"},
+    {"name": "11_Approved_Animation", "id": "1MJXBPRFn_zbzR4n0A0tJNydQTjoOpryK"},
+    {"name": "12_Subtitles_SRT", "id": "1LkDqJnwgfAvRqjTxH68JHZZ-ZtNzdRoy"},
+    {"name": "13_Rendered_Segments", "id": "1UroRzlJ0QFWD57XKAQmlW3SNtkfoKZR4"},
+    {"name": "14_Final_Video", "id": "1lHd5dSq6XFaLGt4rvaPZZccjDkCmdKEr"},
+    {"name": "15_Quality_Control", "id": "1vXtBmS9o3rBHALPhb_IES-T9fAai9nWR"},
+    {"name": "16_Production_Reports", "id": "1OxFkZuyDfEWaHNtU1MYrisAneIDsHfWE"}
+  ],
+  "entries": [
+    {
+      "file": "source-v1-3722df2.zip",
+      "version": 1,
+      "milestone": "project-setup",
+      "size": 100256,
+      "gitCommit": "3722df2",
+      "driveFileId": "1rX-ltZzbTeYc3Ybyky-cn6BvGJEjcdGV",
+      "uploadStatus": "verified",
+      "uploadedAt": "2026-11-26T01:40:00Z"
+    },
+    {
+      "file": "production-status-v1.md",
+      "version": 1,
+      "milestone": "project-setup",
+      "size": 2382,
+      "gitCommit": "3722df2",
+      "driveFileId": "1qhYPTbEe67kbHl_Oq-n4A4YJ66tgESWp",
+      "uploadStatus": "verified",
+      "uploadedAt": "2026-11-26T01:40:00Z"
+    },
+    {
+      "file": "lobhi-mutton-handi-bengali-DRAFT.srt",
+      "version": 1,
+      "milestone": "project-setup",
+      "size": 27057,
+      "gitCommit": "3722df2",
+      "driveFileId": "1x5GwO7vZJr7EwCJy4okjAWySuhZKMLFE",
+      "uploadStatus": "verified",
+      "uploadedAt": "2026-11-26T01:40:00Z",
+      "note": "DRAFT timings from storyboard estimates; regenerate after VO recording"
+    }
+  ]
+}
