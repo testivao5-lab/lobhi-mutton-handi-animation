@@ -114,7 +114,8 @@ export const Stage: React.FC<{
       const yScr = (-pf.y * 0.5 + 0.5) * height;
       const yHead = (-ph.y * 0.5 + 0.5) * height;
       const pxBody = Math.max(6, yScr - yHead);
-      const H = (pxBody * 330) / 308;
+      // SVG feet(299)->head-top(26) = 273 of 330 viewBox height (D-005 fix)
+      const H = pxBody * (330 / 273);
       const W = (H * 200) / 330;
       const dx = cam.position.x - feet.x;
       const dz = cam.position.z - feet.z;
@@ -124,7 +125,7 @@ export const Stage: React.FC<{
         id: c.id,
         cfg: c.cfg,
         left: xScr - W / 2,
-        top: yScr - H * 0.918,
+        top: yScr - H * (299 / 330),
         width: W,
         yaw,
         expression: expr,

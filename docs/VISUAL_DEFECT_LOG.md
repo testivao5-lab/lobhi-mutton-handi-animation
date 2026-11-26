@@ -5,3 +5,7 @@
 | D-001 | TestClip v3 render | — | missing asset | proud-closed sprite referenced but absent (render fail 45786988312) | critical | TestClip.tsx | fallback (d873be4) | ✅ rerun green |
 | D-002 | all pre-v5 | — | style | flat SVG look rejected by owner (level-1) | critical | — | pivot to 3D house style | ✅ addendum |
 | D-003 | (open) | — | QC | still/contact-sheet inspection pending for v5 | high | — | QC pass after render | ⏳ |
+
+| D-004 | StyleTest v5 stills | all | rendering | Canvas empty in stills+video: world build state flip didn't re-run frame layout effect → composer.render never called; fonts delayRender without failsafe risked hang | critical | Stage.tsx | built-state re-render + 2.5s font failsafe (13b09e7) | ✅ stills show world |
+| D-005 | StyleTest v5 stills | f144 | proportions | Characters ~12% too small vs 3D anchor (feet→head ratio used 330/308, actual SVG 330/273); adults 1.68m read small next to 2.2m doors | high | Stage.tsx, worlds.ts | ratio fixed + adult height 1.74/1.62/1.68 | ✅ verify in v5b stills |
+| D-006 | StyleTest v5 stills | f144 | composition | open QC: Bolai arm/hand construction at close range; door dark-plane depth; Fatik occlusion by counter handis | medium | Char2D/kit | inspect v5b closeups before cast sheets | ⏳ |

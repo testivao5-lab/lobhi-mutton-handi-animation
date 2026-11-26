@@ -145,9 +145,9 @@ export function buildVillage(opts: VillageOpts): World {
   };
 
   const chars: CharAnchor[] = [];
-  chars.push(mkChar(CAST.bolai, new THREE.Vector3(-9.5, 0, 1.6)));
-  chars.push(mkChar(CAST.champa, new THREE.Vector3(-6.6, 0, -0.9), 1.58));
-  chars.push(mkChar(CAST.fatik, new THREE.Vector3(13.0, 0, 0.1), 1.62));
+  chars.push(mkChar(CAST.bolai, new THREE.Vector3(-9.5, 0, 1.6), 1.74));
+  chars.push(mkChar(CAST.champa, new THREE.Vector3(-6.6, 0, -0.9), 1.62));
+  chars.push(mkChar(CAST.fatik, new THREE.Vector3(13.0, 0, 0.1), 1.68));
 
   // bolt champa + fatik shadows to their owners (bolai's moves)
   // (champa/fatik stay static; only bolai's anchor + shadow move in tick)
