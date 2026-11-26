@@ -3,6 +3,7 @@ import {Composition} from 'remotion';
 import {MainEpisode} from './compositions/MainEpisode';
 import {TestClip} from './compositions/TestClip';
 import {ConceptBolai} from './compositions/ConceptBolai';
+import {ConceptBolaiReal, ConceptBolaiRealDetail} from './compositions/ConceptBolaiReal';
 import {FPS, HEIGHT, WIDTH} from './config/constants';
 import {TOTAL_STORYBOARD_FRAMES} from './data/shots';
 import {TEST_CLIP_FRAMES} from './compositions/TestClip';
@@ -34,6 +35,23 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="ConceptBolai"
         component={ConceptBolai}
+        durationInFrames={1}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+      />
+      {/* REALISM BAR: detailed code-drawn Bolai (owner bar: realistic, no stick figures) */}
+      <Composition
+        id="ConceptBolaiReal"
+        component={ConceptBolaiReal}
+        durationInFrames={1}
+        fps={FPS}
+        width={WIDTH}
+        height={HEIGHT}
+      />
+      <Composition
+        id="ConceptBolaiRealDetail"
+        component={ConceptBolaiRealDetail}
         durationInFrames={1}
         fps={FPS}
         width={WIDTH}
