@@ -27,3 +27,10 @@ _Updated: 2026-11-26. This file is the execution report (master prompt §19). It
 - All shot timings are **storyboard estimates**. The recorded Bengali voice-over is the timing master; frame ranges and the SRT will be regenerated once VO audio exists (storyboard Part 7 — especially S15_SH87 and S15_SH90 which must be extended).
 - Subtitles are never burned into the final MP4; the SRT is a separate deliverable.
 - A successful GitHub push is not a successful Drive backup — each is verified independently and recorded in `docs/backup-manifest.json`.
+
+## 2026-11-26 — STRICT RULE ENFORCED: ZERO generative AI
+- Owner decree: NO generative AI ever (visuals/assets). Remotion code-drawn art ONLY (SVG/React).
+- ALL AI-generated images purged from repo (character sprites, cutouts, painted BGs, handi ECU, model sheets).
+- New pipeline: `src/components/characters/BolaiV3.tsx` (parametric code-drawn Bolai: 6 expressions, walk cycle, talk visemes, blink, tears) + `src/components/scenes/CodeScenes.tsx` (market 3-layer parallax, shop interior, counter fg, handi ECU — all SVG).
+- TestClip v4 rebuilt pure-code; awaiting render + owner gate.
+- Owner-selected VO voices remain locked (owner personally chose them; visual AI rule does not revoke voice selections).
