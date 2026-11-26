@@ -1,4 +1,5 @@
 import React from 'react';
+import {random} from 'remotion';
 
 /**
  * Character rig foundations (storyboard §Part 2, §8, §5.4).
