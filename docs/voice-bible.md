@@ -1,4 +1,4 @@
-# Voice Bible
+# Voice Bible — ✅ APPROVED & LOCKED (owner selections)
 
 ## Rules (master prompt §5)
 
@@ -6,25 +6,36 @@
 - After approval, the voice ID is locked here and never replaced without asking.
 - Bengali VO audio is the timing master for the whole timeline.
 
-## Audition protocol
+## Approval history
 
-- Each role gets an audition pair speaking the character's own scripted lines.
-- 12 roles auditioned in round 1: NAR, C01 Bolai, C02 Champa, C03 Subol, C04 Tapan, C05 Fatik, C06 Soumen, C07 Bhavesh Kaka, C08 Prabhat Moshai, C09 Raybabu, C10 Daroga Babu, C11 Food Officer.
-- Guest (crowd) voices for S11_SH62–64 will be auditioned after the lead cast is locked.
+| Round | Outcome |
+|---|---|
+| Round 1 (10 auditions, index 0) | Owner REJECTED all candidates as robotic/cheap-sounding → replaced entirely |
+| Round 2 (10 auditions, conversational/emotional scripts, index 1) | Owner SELECTED 9 roles |
+| Round 3 (2 auditions, index 0/2) | Owner SELECTED Champa + Food Officer |
+| Round 4 (1 audition, index 2) | Owner SELECTED Soumen (missed in round 2 due to per-turn limit) |
 
-## Locked voices
+## 🔒 Locked voices (owner-selected, never replace without asking)
 
 | Role | Character | Voice ID | Language | Status |
 |---|---|---|---|---|
-| Narrator | — | TBD | bn | ⏳ awaiting selection |
-| C01 | Bolai | TBD | bn | ⏳ awaiting selection |
-| C02 | Champa | TBD | bn | ⏳ awaiting selection |
-| C03 | Subol | TBD | bn | ⏳ awaiting selection |
-| C04 | Tapan | TBD | bn | ⏳ awaiting selection |
-| C05 | Fatik | TBD | bn | ⏳ awaiting selection |
-| C06 | Soumen | TBD | bn | ⏳ awaiting selection |
-| C07 | Bhavesh Kaka | TBD | bn | ⏳ awaiting selection |
-| C08 | Prabhat Moshai | TBD | bn | ⏳ awaiting selection |
-| C09 | Raybabu | TBD | bn | ⏳ awaiting selection |
-| C10 | Daroga Babu | TBD | bn | ⏳ awaiting selection |
-| C11 | Food Officer | TBD | bn | ⏳ awaiting selection |
+| Narrator | — | `voice-10` | bn | ✅ owner-selected (round 2) |
+| C01 | Bolai | `voice-11` | bn | ✅ owner-selected (round 2) |
+| C02 | Champa | `voice-20` | bn | ✅ owner-selected (round 3) |
+| C03 | Subol | `voice-15` | bn | ✅ owner-selected (round 2) |
+| C04 | Tapan | `voice-14` | bn | ✅ owner-selected (round 2) |
+| C05 | Fatik | `voice-13` | bn | ✅ owner-selected (round 2) |
+| C06 | Soumen | `voice-22` | bn | ✅ owner-selected (round 4) |
+| C07 | Bhavesh Kaka | `voice-16` | bn | ✅ owner-selected (round 2) |
+| C08 | Prabhat Moshai | `voice-19` | bn | ✅ owner-selected (round 2) |
+| C09 | Raybabu | `voice-17` | bn | ✅ owner-selected (round 2) |
+| C10 | Daroga Babu | `voice-18` | bn | ✅ owner-selected (round 2) |
+| C11 | Food Officer | `voice-21` | bn | ✅ owner-selected (round 3) |
+
+Code mirror: `src/config/voices.ts`. Ceremony guest crowd voices (S11_SH62–64) will be auditioned separately if distinct guest voices are needed; default = Narrator-side crowd handling.
+
+## Delivery notes
+
+- Audition scripts used each character's own scripted lines with emotional peaks (begging, anger, fear, cunning) so the owner judged real acting range, not flat narration.
+- Emotional delivery targets per character follow the storyboard expression library (e.g., Bolai: confident → greedy → trembling; Tapan: frightened whisper → determined truth-telling).
+- Final dialogue timing uses the generated VO per line as the master; frame ranges and the SRT regenerate after the full VO pass.
