@@ -2,87 +2,112 @@ import React from 'react';
 import {CHARACTER_PALETTES, Expression, MouthShape} from '../CharacterRig';
 
 /**
- * Bolai (C01) animation rig — built from the OWNER-APPROVED model sheet v1
- * (public/characters/design/bolai-model-sheet-v1.png). Design lock:
- * mustard-yellow half-sleeve shirt, off-white dhoti, red checked gamcha on the
- * left shoulder, brown sandals, slight belly, thick black moustache, short
- * black hair combed back, warm brown skin.
+ * Bolai (C01) rig v2 — rebuilt after the owner REJECTED test clip v1.
+ * Upgrades vs v1: pear torso w/ shading, two-segment arms (elbow joint),
+ * knee-bend legs, moustache talk-bounce, head tilt + nod, gamcha spring
+ * follow-through, bold outlines matching the APPROVED model sheet v1,
+ * squash & stretch + body lean in the walk, anticipation-ready wave/point props.
  */
 
 const P = CHARACTER_PALETTES.C01;
+const OUT = '#4a2c14'; // bold outline color (matches approved sheet)
 
-interface BolaiProps {
+export interface BolaiProps {
   expression?: Expression;
   mouth?: MouthShape;
-  /** radians; drives the walk cycle (legs/arms swing + body bob) */
+  /** walk cycle phase (radians). 0 = standing idle */
   walkPhase?: number;
-  /** 0..1 — right-arm waving amount */
+  /** 0..1 (+ anticipation handled by caller via negative values) — right arm raise */
   wave?: number;
+  /** 0..1 — right arm extended pointing toward frame-left (his right) */
+  point?: number;
   blink?: boolean;
-  /** 0..1 — amount of greedy eye-narrowing */
+  /** 0..1 greedy eye narrowing */
   sly?: number;
+  /** 0..1..-0.2 — body lean (positive = forward) */
+  lean?: number;
   scale?: number;
   x?: number;
   y?: number;
+  /** speaking flag: drives moustache bounce */
+  talking?: boolean;
 }
 
 const mouthPath = (m: MouthShape): React.ReactNode => {
   switch (m) {
     case 'open-wide':
-      return <ellipse cx={0} cy={16} rx={13} ry={16} fill="#5a2320" />;
+      return (
+        <g>
+          <path d="M -13 8 Q 0 34 13 8 Q 0 14 -13 8 Z" fill="#4a1e1a" stroke={OUT} strokeWidth={2} />
+          <path d="M -7 20 Q 0 26 7 20 Q 0 30 -7 20 Z" fill="#a8453a" />
+        </g>
+      );
     case 'open-small':
-      return <ellipse cx={0} cy={17} rx={9} ry={9} fill="#5a2320" />;
+      return <ellipse cx={0} cy={16} rx={9} ry={8} fill="#4a1e1a" stroke={OUT} strokeWidth={2} />;
     case 'round':
-      return <ellipse cx={0} cy={17} rx={8} ry={12} fill="#5a2320" />;
+      return <ellipse cx={0} cy={17} rx={7.5} ry={11} fill="#4a1e1a" stroke={OUT} strokeWidth={2} />;
     case 'smile-open':
       return (
-        <path d="M -14 12 Q 0 30 14 12 Q 0 20 -14 12 Z" fill="#5a2320" />
+        <g>
+          <path d="M -15 10 Q 0 32 15 10 Q 0 18 -15 10 Z" fill="#4a1e1a" stroke={OUT} strokeWidth={2} />
+          <path d="M -10 12 Q 0 17 10 12 L 10 10 Q 0 14 -10 10 Z" fill="#f7f3ea" />
+        </g>
       );
     case 'closed':
-      return <path d="M -10 16 Q 0 20 10 16" stroke="#4a2320" strokeWidth={3} fill="none" strokeLinecap="round" />;
+      return <path d="M -11 15 Q 0 21 11 15" stroke={OUT} strokeWidth={3.4} fill="none" strokeLinecap="round" />;
     default: // rest
-      return <path d="M -8 17 Q 0 19 8 17" stroke="#4a2320" strokeWidth={3} fill="none" strokeLinecap="round" />;
+      return <path d="M -9 16 Q 0 19 9 16" stroke={OUT} strokeWidth={3.2} fill="none" strokeLinecap="round" />;
   }
 };
 
-const eyeFor = (expression: Expression, blink: boolean, sly: number) => {
-  const white = '#f7f3ea';
-  const iris = '#2a1c12';
-  if (blink) {
-    return (
-      <g>
-        <path d="M -34 -6 q 8 5 16 0" stroke={iris} strokeWidth={3} fill="none" />
-        <path d="M 18 -6 q 8 5 16 0" stroke={iris} strokeWidth={3} fill="none" />
-      </g>
-    );
-  }
-  const narrow = expression === 'suspicious' || expression === 'greedy' || sly > 0;
-  const ry = narrow ? 4.5 : 8;
-  const angry = expression === 'angry';
+const BrowSet: React.FC<{exp: Expression}> = ({exp}) => {
+  // per-expression brow geometry: [leftDy, rightDy, innerDrop]
+  const cfg: Record<string, [number, number, number]> = {
+    angry: [4, 4, 10],
+    greedy: [2, 2, 6],
+    suspicious: [1, 1, 5],
+    nervous: [-4, -2, 2],
+    shocked: [-10, -10, -2],
+    surprised: [-10, -10, -2],
+    sad: [-2, -2, 8],
+    regretful: [-2, -2, 8],
+    crying: [-3, -3, 9],
+    proud: [-4, -4, 0],
+    happy: [-3, -3, 0],
+    cunning: [1, 1, 6],
+    calm: [0, 0, 0],
+  };
+  const [ldy, rdy, inner] = cfg[exp] ?? [0, 0, 0];
   return (
-    <g>
-      <ellipse cx={-26} cy={-6} rx={11} ry={ry} fill={white} stroke={iris} strokeWidth={2} />
-      <circle cx={-24} cy={-5} r={4.6} fill={iris} />
-      <ellipse cx={22} cy={-6} rx={11} ry={ry} fill={white} stroke={iris} strokeWidth={2} />
-      <circle cx={24} cy={-5} r={4.6} fill={iris} />
-      {angry && (
-        <g stroke={P.hair} strokeWidth={5} strokeLinecap="round">
-          <path d="M -38 -20 L -14 -14" />
-          <path d="M 34 -20 L 10 -14" />
-        </g>
-      )}
+    <g stroke={P.hair} strokeWidth={6} strokeLinecap="round" fill="none">
+      <path d={`M -40 ${-22 + ldy} Q -26 ${-30 + ldy + inner * 0.5} -14 ${-24 + ldy + inner}`} />
+      <path d={`M 14 ${-24 + rdy + inner} Q 26 ${-30 + rdy + inner * 0.5} 40 ${-22 + rdy}`} />
     </g>
   );
 };
 
-const browFor = (expression: Expression) => {
-  if (expression === 'angry') return null; // drawn in eyeFor
-  const y = expression === 'shocked' || expression === 'surprised' ? -26 : -20;
-  const tilt = expression === 'sad' || expression === 'regretful' || expression === 'crying' ? 4 : 0;
+const EyeSet: React.FC<{blink: boolean; exp: Expression; sly: number}> = ({blink, exp, sly}) => {
+  const narrow = exp === 'suspicious' || exp === 'greedy' || exp === 'cunning' || sly > 0;
+  const ry = narrow ? 4.2 : 8.2;
+  const wide = exp === 'shocked' || exp === 'surprised';
+  const r = wide ? 5.4 : 4.6;
+  if (blink) {
+    return (
+      <g stroke={OUT} strokeWidth={3.2} fill="none" strokeLinecap="round">
+        <path d="M -36 -6 q 10 6 20 0" />
+        <path d="M 16 -6 q 10 6 20 0" />
+      </g>
+    );
+  }
   return (
-    <g stroke={P.hair} strokeWidth={5} strokeLinecap="round" fill="none">
-      <path d={`M -38 ${y + tilt} q 12 -7 24 -1`} />
-      <path d={`M 14 ${y - 1} q 12 -6 24 ${-7 + tilt}`} />
+    <g>
+      {[[-26], [22]].map(([cx], i) => (
+        <g key={i}>
+          <ellipse cx={cx} cy={-6} rx={11} ry={ry} fill="#f7f3ea" stroke={OUT} strokeWidth={2.4} />
+          <circle cx={cx + 2} cy={-5} r={r} fill="#2a1c12" />
+          <circle cx={cx + 4} cy={-7.5} r={1.5} fill="#fff" />
+        </g>
+      ))}
     </g>
   );
 };
@@ -92,20 +117,41 @@ export const Bolai: React.FC<BolaiProps> = ({
   mouth = 'rest',
   walkPhase = 0,
   wave = 0,
+  point = 0,
   blink = false,
   sly = 0,
+  lean = 0,
   scale = 1,
   x = 0,
   y = 0,
+  talking = false,
 }) => {
-  const swing = Math.sin(walkPhase) * 24;
-  const bob = Math.abs(Math.cos(walkPhase)) * 5 * (walkPhase === 0 ? 0 : 1);
-  const breathe = Math.sin(walkPhase * 0.35) * 1.5;
-  const legA = {transform: `rotate(${swing} 170 400)`};
-  const legB = {transform: `rotate(${-swing} 230 400)`};
-  const armWave = -155 * wave + Math.sin(walkPhase * 1.7) * 10 * wave;
-  const armA = {transform: `rotate(${-swing * 0.8} 150 245)`};
-  const armB = {transform: `rotate(${swing * 0.8 + armWave} 250 245)`};
+  const walking = walkPhase !== 0;
+  const swing = Math.sin(walkPhase) * 26;
+  // vertical bounce (2 beats per cycle) + squash/stretch
+  const bob = walking ? Math.abs(Math.cos(walkPhase)) * 7 : Math.sin(walkPhase * 0.4) * 1.6;
+  const sq = walking ? 1 + Math.sin(walkPhase * 2) * 0.02 : 1;
+  const bodyLean = (walking ? 3 : 0) + lean * 8;
+
+  const kneeL = Math.max(0, Math.sin(walkPhase + 0.9)) * 26;
+  const kneeR = Math.max(0, Math.sin(walkPhase + Math.PI + 0.9)) * 26;
+  const hipSwingL = walking ? swing * 0.9 : 0;
+  const hipSwingR = walking ? -swing * 0.9 : 0;
+
+  // arm geometry: wave raises right arm; point extends it forward-left
+  const shoulderY = 246;
+  const raiseR = wave * 118 + point * 66; // degrees
+  const elbowR = -28 * wave - 52 * point + (wave > 0.4 ? Math.sin(walkPhase * 1.6) * 8 * wave : 0);
+  const armSwingL = walking ? swing * 0.75 : Math.sin(walkPhase * 0.4) * 2;
+  const armSwingR = walking ? -swing * 0.5 : 0;
+
+  // gamcha follow-through: lagged derivative of body bob (spring feel)
+  const gamchaLag = walking ? Math.sin(walkPhase - 1.1) * 7 : Math.sin(walkPhase * 0.4 - 0.8) * 2;
+  // moustache talk bounce
+  const moBounce = talking && mouth !== 'rest' ? Math.sin(walkPhase * 3.1) * 0.6 : 0;
+  // head tilt + occasional nod driven by phase
+  const headTilt = Math.sin(walkPhase * 0.5) * 2 + (talking ? Math.sin(walkPhase * 0.9) * 1.4 : 0);
+  const headNod = talking ? Math.abs(Math.sin(walkPhase * 0.45)) * 2.2 : 0;
 
   return (
     <svg
@@ -115,105 +161,123 @@ export const Bolai: React.FC<BolaiProps> = ({
       style={{position: 'absolute', left: x, top: y, overflow: 'visible'}}
     >
       <defs>
-        <pattern id="gamchaCheck" width="14" height="14" patternUnits="userSpaceOnUse">
-          <rect width="14" height="14" fill={P.accent} />
-          <rect width="7" height="7" fill="#e8e0d0" opacity={0.85} />
-          <rect x={7} y={7} width="7" height="7" fill="#e8e0d0" opacity={0.85} />
+        <pattern id="gamchaCheckV2" width="16" height="16" patternUnits="userSpaceOnUse">
+          <rect width="16" height="16" fill={P.accent} />
+          <rect width="8" height="8" fill="#eee6d6" opacity={0.9} />
+          <rect x={8} y={8} width="8" height="8" fill="#eee6d6" opacity={0.9} />
         </pattern>
       </defs>
 
-      <g transform={`translate(0 ${-bob + breathe})`}>
-        {/* shadow */}
-        <ellipse cx={200} cy={596} rx={105} ry={16} fill="rgba(40,20,10,0.22)" />
+      <ellipse cx={200} cy={598} rx={108} ry={15} fill="rgba(40,20,10,0.25)" />
 
-        {/* legs + sandals */}
-        <g {...legA}>
-          <rect x={158} y={395} width={34} height={150} rx={16} fill={P.secondary} />
-          <rect x={152} y={540} width={52} height={20} rx={9} fill="#7a4a28" />
-        </g>
-        <g {...legB}>
-          <rect x={208} y={395} width={34} height={150} rx={16} fill={P.secondary} />
-          <rect x={202} y={540} width={52} height={20} rx={9} fill="#7a4a28" />
-        </g>
+      <g transform={`translate(200 596) scale(1 ${sq}) translate(-200 -596)`}>
+        <g transform={`translate(0 ${-bob}) rotate(${bodyLean} 200 560)`}>
+          {/* ---- legs (thigh + shin with knee) ---- */}
+          <g transform={`rotate(${hipSwingL} 180 400)`}>
+            <path d="M 165 396 L 197 396 L 193 468 L 169 468 Z" fill={P.secondary} stroke={OUT} strokeWidth={2.5} />
+            <g transform={`rotate(${kneeL} 181 468)`}>
+              <path d="M 168 466 L 194 466 L 191 545 L 171 545 Z" fill={P.secondary} stroke={OUT} strokeWidth={2.5} />
+              <path d="M 160 543 Q 182 536 204 543 L 200 560 Q 182 566 164 560 Z" fill="#7a4a28" stroke={OUT} strokeWidth={2.5} />
+            </g>
+          </g>
+          <g transform={`rotate(${hipSwingR} 222 400)`}>
+            <path d="M 207 396 L 239 396 L 235 468 L 211 468 Z" fill={P.secondary} stroke={OUT} strokeWidth={2.5} />
+            <g transform={`rotate(${kneeR} 223 468)`}>
+              <path d="M 210 466 L 236 466 L 233 545 L 213 545 Z" fill={P.secondary} stroke={OUT} strokeWidth={2.5} />
+              <path d="M 202 543 Q 224 536 246 543 L 242 560 Q 224 566 206 560 Z" fill="#7a4a28" stroke={OUT} strokeWidth={2.5} />
+            </g>
+          </g>
 
-        {/* dhoti */}
-        <path
-          d="M 138 380 L 262 380 L 276 520 Q 200 542 124 520 Z"
-          fill={P.secondary}
-          stroke="#c9bfa4"
-          strokeWidth={2}
-        />
-        <path d="M 168 385 L 162 528 M 200 388 L 200 534 M 232 385 L 238 528" stroke="#dcd3ba" strokeWidth={3} fill="none" />
-
-        {/* torso with belly */}
-        <path
-          d="M 140 250 Q 134 320 142 360 Q 200 392 258 360 Q 266 320 260 250 Q 200 226 140 250 Z"
-          fill={P.primary}
-          stroke="#b5830f"
-          strokeWidth={2.5}
-        />
-        <path d="M 152 300 Q 200 330 248 300" stroke="#c99512" strokeWidth={2.5} fill="none" opacity={0.6} />
-        {/* shirt placket */}
-        <path d="M 200 232 L 200 300" stroke="#b5830f" strokeWidth={3} />
-        <circle cx={200} cy={258} r={3.4} fill="#b5830f" />
-        <circle cx={200} cy={280} r={3.4} fill="#b5830f" />
-        {/* collar */}
-        <path d="M 172 236 L 200 252 L 228 236 L 224 226 L 176 226 Z" fill="#caa013" />
-
-        {/* left arm (viewer-left, his right) */}
-        <g {...armA}>
-          <rect x={128} y={240} width={30} height={130} rx={15} fill={P.primary} />
-          <path d="M 128 358 q 16 22 32 0 l -4 -14 l -26 0 Z" fill={P.skin} />
-        </g>
-
-        {/* right arm */}
-        <g {...armB}>
-          <rect x={242} y={240} width={30} height={130} rx={15} fill={P.primary} />
-          <path d="M 240 358 q 16 22 32 0 l -4 -14 l -26 0 Z" fill={P.skin} />
-        </g>
-
-        {/* gamcha over left shoulder */}
-        <path
-          d="M 150 234 L 196 234 L 186 330 Q 168 344 154 326 Z"
-          fill="url(#gamchaCheck)"
-          stroke="#a83228"
-          strokeWidth={2}
-        />
-
-        {/* neck */}
-        <rect x={184} y={206} width={32} height={30} rx={10} fill={P.skinShade} />
-
-        {/* head group */}
-        <g transform="translate(200 150)">
-          {/* ears */}
-          <circle cx={-48} cy={0} r={13} fill={P.skin} stroke="#9a6335" strokeWidth={2} />
-          <circle cx={48} cy={0} r={13} fill={P.skin} stroke="#9a6335" strokeWidth={2} />
-          {/* face */}
+          {/* ---- dhoti with hem sway ---- */}
           <path
-            d="M -52 -18 Q -54 -52 0 -56 Q 54 -52 52 -18 Q 56 22 24 44 Q 0 56 -24 44 Q -56 22 -52 -18 Z"
-            fill={P.skin}
-            stroke="#9a6335"
-            strokeWidth={2.5}
+            d={`M 136 378 L 264 378 L ${272 + gamchaLag * 0.4} 512 Q 200 536 ${128 - gamchaLag * 0.4} 512 Z`}
+            fill={P.secondary}
+            stroke={OUT}
+            strokeWidth={3}
           />
-          {/* hair combed back */}
+          <path d="M 170 386 L 165 518 M 200 390 L 200 524 M 230 386 L 236 518" stroke="#d6cbb0" strokeWidth={3} fill="none" opacity={0.85} />
+          <path d="M 136 378 L 264 378 L 262 396 L 138 396 Z" fill="#e4dbc2" opacity={0.55} />
+
+          {/* ---- torso: pear + belly, shaded ---- */}
           <path
-            d="M -54 -24 Q -58 -62 0 -66 Q 58 -62 54 -24 Q 52 -44 34 -50 Q 12 -58 -12 -52 Q -38 -48 -48 -30 Q -52 -26 -54 -24 Z"
-            fill={P.hair}
+            d="M 142 248 Q 130 316 144 362 Q 200 396 256 362 Q 270 316 258 248 Q 200 224 142 248 Z"
+            fill={P.primary}
+            stroke={OUT}
+            strokeWidth={3}
           />
-          {eyeFor(expression, blink, sly)}
-          {browFor(expression)}
-          {/* nose */}
-          <path d="M 0 -2 q 7 10 -1 14 q -6 2 -8 -3" stroke="#8a5427" strokeWidth={3} fill="none" strokeLinecap="round" />
-          {/* moustache */}
           <path
-            d="M -26 10 Q -12 4 0 8 Q 12 4 26 10 Q 14 18 0 14 Q -14 18 -26 10 Z"
-            fill={P.hair}
+            d="M 158 268 Q 148 316 158 352 Q 186 368 210 364 Q 178 336 176 296 Q 172 276 158 268 Z"
+            fill="#c9950f"
+            opacity={0.45}
           />
-          {/* mouth */}
-          <g transform="translate(0 6)">{mouthPath(mouth)}</g>
-          {/* cheek blush */}
-          <ellipse cx={-36} cy={12} rx={9} ry={5} fill="#a05a30" opacity={0.5} />
-          <ellipse cx={36} cy={12} rx={9} ry={5} fill="#a05a30" opacity={0.5} />
+          <path d="M 200 236 L 200 304" stroke={OUT} strokeWidth={3} opacity={0.8} />
+          <circle cx={200} cy={260} r={3.6} fill={OUT} />
+          <circle cx={200} cy={284} r={3.6} fill={OUT} />
+          <path d="M 170 236 L 200 254 L 230 236 L 226 224 L 174 224 Z" fill="#caa013" stroke={OUT} strokeWidth={2.5} />
+
+          {/* ---- left arm (his right; viewer-left) ---- */}
+          <g transform={`rotate(${armSwingL} 146 252)`}>
+            <path d="M 132 244 Q 122 300 128 342 L 156 342 Q 162 300 158 248 Z" fill={P.primary} stroke={OUT} strokeWidth={2.8} />
+            <g transform={`rotate(${-14 - armSwingL * 0.4} 142 342)`}>
+              <path d="M 130 340 Q 126 372 134 396 L 156 394 Q 160 368 156 340 Z" fill={P.primary} stroke={OUT} strokeWidth={2.8} />
+              <circle cx={145} cy={402} r={11} fill={P.skin} stroke={OUT} strokeWidth={2.5} />
+            </g>
+          </g>
+
+          {/* ---- right arm (wave / point) ---- */}
+          <g transform={`rotate(${-armSwingR - raiseR} 254 252)`}>
+            <path d="M 244 244 Q 254 300 250 342 L 276 340 Q 280 298 272 248 Z" fill={P.primary} stroke={OUT} strokeWidth={2.8} />
+            <g transform={`rotate(${elbowR} 262 340)`}>
+              <path d="M 250 338 Q 254 372 248 396 L 270 398 Q 278 368 274 340 Z" fill={P.primary} stroke={OUT} strokeWidth={2.8} />
+              <circle cx={258} cy={404} r={11} fill={P.skin} stroke={OUT} strokeWidth={2.5} />
+              {point > 0.3 && (
+                <path d="M 252 402 L 220 412" stroke={P.skin} strokeWidth={9} strokeLinecap="round" opacity={point} />
+              )}
+            </g>
+          </g>
+
+          {/* ---- gamcha with spring follow-through ---- */}
+          <g transform={`rotate(${gamchaLag} 172 236)`}>
+            <path d="M 148 232 L 196 232 L 184 336 Q 166 350 150 330 Z" fill="url(#gamchaCheckV2)" stroke="#a83228" strokeWidth={2.5} />
+            <path d="M 188 300 Q 200 330 190 356" stroke="#a83228" strokeWidth={2.5} fill="none" />
+          </g>
+
+          {/* ---- neck ---- */}
+          <path d="M 182 206 L 218 206 L 214 240 L 186 240 Z" fill={P.skinShade} stroke={OUT} strokeWidth={2.2} />
+
+          {/* ---- head ---- */}
+          <g transform={`translate(200 150) rotate(${headTilt}) translate(0 ${headNod})`}>
+            <circle cx={-50} cy={2} r={12} fill={P.skin} stroke={OUT} strokeWidth={2.4} />
+            <circle cx={50} cy={2} r={12} fill={P.skin} stroke={OUT} strokeWidth={2.4} />
+            <path
+              d="M -54 -16 Q -58 -56 0 -62 Q 58 -56 54 -16 Q 60 24 26 46 Q 0 60 -26 46 Q -60 24 -54 -16 Z"
+              fill={P.skin}
+              stroke={OUT}
+              strokeWidth={3}
+            />
+            <path d="M -50 6 Q -30 52 0 54 Q 30 52 50 6 Q 44 40 22 50 Q 0 58 -22 50 Q -44 40 -50 6 Z" fill={P.skinShade} opacity={0.35} />
+            {/* hair combed back, side part */}
+            <path
+              d="M -56 -22 Q -62 -66 0 -72 Q 62 -66 56 -22 Q 54 -46 38 -54 Q 16 -62 -8 -56 Q -34 -52 -46 -32 Q -52 -26 -56 -22 Z"
+              fill={P.hair}
+            />
+            <path d="M 8 -70 Q 2 -58 -4 -54" stroke="#3a2a20" strokeWidth={2} fill="none" />
+            <EyeSet blink={blink} exp={expression} sly={sly} />
+            <BrowSet exp={expression} />
+            <path d="M 0 -2 q 8 11 -1 15 q -7 3 -9 -2" stroke="#8a5427" strokeWidth={3.2} fill="none" strokeLinecap="round" />
+            {/* moustache w/ talk bounce */}
+            <g transform={`translate(0 ${moBounce})`}>
+              <path
+                d="M -28 12 Q -14 4 0 9 Q 14 4 28 12 Q 15 21 0 16 Q -15 21 -28 12 Z"
+                fill={P.hair}
+                stroke={OUT}
+                strokeWidth={1.6}
+              />
+            </g>
+            <g transform="translate(0 8)">{mouthPath(mouth)}</g>
+            <ellipse cx={-38} cy={14} rx={9} ry={5} fill="#a05a30" opacity={0.45} />
+            <ellipse cx={38} cy={14} rx={9} ry={5} fill="#a05a30" opacity={0.45} />
+          </g>
         </g>
       </g>
     </svg>
