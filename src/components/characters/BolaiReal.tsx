@@ -204,7 +204,7 @@ const HandOpen: React.FC<{x: number; y: number; flip?: boolean}> = ({x, y, flip}
 export const BolaiReal: React.FC<{view?: 'front' | 'side' | 'back'}> = ({view = 'front'}) => {
   if (view === 'side') {
     return (
-      <svg viewBox="0 0 840 1700" width="100%" style={{maxHeight: '100vh'}}>
+      <svg viewBox="0 0 840 1700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
         <Defs />
         <g stroke={INK} fill="none">
           {/* head profile */}
@@ -252,7 +252,7 @@ export const BolaiReal: React.FC<{view?: 'front' | 'side' | 'back'}> = ({view = 
   }
   if (view === 'back') {
     return (
-      <svg viewBox="0 0 840 1700" width="100%" style={{maxHeight: '100vh'}}>
+      <svg viewBox="0 0 840 1700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
         <Defs />
         <g stroke={INK} fill="none">
           {/* head back */}
@@ -295,7 +295,7 @@ export const BolaiReal: React.FC<{view?: 'front' | 'side' | 'back'}> = ({view = 
   }
   // FRONT (default)
   return (
-    <svg viewBox="0 0 840 1700" width="100%" style={{maxHeight: '100vh'}}>
+    <svg viewBox="0 0 840 1700" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
       <Defs />
       <g stroke={INK} fill="none">
         {/* ---- legs (behind dhoti) ---- */}
@@ -377,7 +377,7 @@ export const BolaiReal: React.FC<{view?: 'front' | 'side' | 'back'}> = ({view = 
 
 /* Face close-up crop (for the detail sheet) */
 export const FaceCUReal: React.FC = () => (
-  <svg viewBox="300 90 240 290" width="100%" style={{maxHeight: '100vh'}}>
+  <svg viewBox="338 96 164 270" width="100%" height="100%" preserveAspectRatio="xMidYMid meet">
     <Defs />
     <FaceReal />
   </svg>
