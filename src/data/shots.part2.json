@@ -1,0 +1,526 @@
+{
+  "shots": [
+    {
+      "id": "S08_SH43", "scene": 8, "title": "Tapan Approaches", "start": 390, "end": 395,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "quiet shop"},
+      "chars": [
+        {"id": "C04", "pos": "left", "exp": "worried", "act": "approaching-cautiously", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "counting-money", "face": "down"}
+      ],
+      "dlg": [], "fx": ["shop-quieter"], "out": "cut"
+    },
+    {
+      "id": "S08_SH44", "scene": 8, "title": "Tapan Warns Bolai", "start": 395, "end": 412,
+      "loc": "BG02", "cam": {"type": "medium-to-close", "mv": "push-in-on-illness-mention", "focus": "Tapan"},
+      "chars": [
+        {"id": "C04", "pos": "left", "exp": "frightened", "act": "low-voice-warning", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "initially-ignoring", "face": "down"}
+      ],
+      "dlg": [
+        {"sp": "C04", "t": "বলাইদা, দোহাই লাগে এই ফটিকের বাসি-পচা মাংস আর নিয়ো না। কালকেও দুজন ক্রেতা হাঁড়ি নিয়ে বাড়ি গিয়ে পেটের অসুখে পড়েছে শুনলাম। মানুষ জানতে পারলে আমাদের দোকান ভেঙে দেবে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S08_SH45", "scene": 8, "title": "Bolai Threatens Tapan", "start": 412, "end": 420,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [
+        {"id": "C01", "pos": "right", "exp": "angry", "act": "pointing-at-tapan", "face": "left"},
+        {"id": "C04", "pos": "left", "exp": "frightened", "act": "lowering-head", "face": "right"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "তুই চুপ কর তো! বেশি পাকামি করবি তো কাজ থেকে তাড়িয়ে দেবো। টাকা আসছে, এটাই বড় কথা! দু’দিন পর লোকে সব ভুলে যাবে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S09_SH46", "scene": 9, "title": "Prabhat and Raybabu Arrive", "start": 420, "end": 428,
+      "loc": "BG02", "cam": {"type": "wide-to-medium", "mv": "dolly", "focus": "entrance"},
+      "chars": [
+        {"id": "C08", "pos": "left", "exp": "calm", "act": "entering", "face": "front"},
+        {"id": "C09", "pos": "center-left", "exp": "calm", "act": "entering", "face": "front"},
+        {"id": "C01", "pos": "right", "exp": "happy", "act": "standing-respectfully", "face": "left"},
+        {"id": "C04", "pos": "far-right", "exp": "worried", "act": "moving-aside", "face": "left"}
+      ],
+      "dlg": [], "fx": [], "out": "cut"
+    },
+    {
+      "id": "S09_SH47", "scene": 9, "title": "Prabhat Introduces Raybabu", "start": 428, "end": 440,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Prabhat"},
+      "chars": [
+        {"id": "C08", "pos": "left", "exp": "calm", "act": "gesturing-toward-raybabu", "face": "right"},
+        {"id": "C09", "pos": "center", "exp": "calm", "act": "standing", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "happy", "act": "folding-hands", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C08", "t": "বলাই, ইনি হলেন রায়বাবু, আমার শহরের বন্ধু। আগামী পরশু ওঁর মেয়ের আশীর্বাদের অনুষ্ঠান আমাদের গ্রামের বাগানবাড়িতে হবে। সেখানে শহরের নামী-দামী অতিথিরা আসবেন।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S09_SH48", "scene": 9, "title": "Raybabu Places Order", "start": 440, "end": 453,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Raybabu"},
+      "chars": [
+        {"id": "C09", "pos": "left", "exp": "calm", "act": "pointing-sealed-handis", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "proud-excited", "act": "listening-brightening", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C09", "t": "শুনলাম আপনার হাতের 'মটন হান্ডি' নাকি খুব বিখ্যাত? আমার অনুষ্ঠানে প্রায় তিনশো অতিথির জন্য আপনার এই স্পেশাল সিল-করা মটন হান্ডি দিতে পারবেন? একেবারে গরম গরম সিল-করা হাঁড়ি সবার পাতে দেওয়া হবে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S09_SH49", "scene": 9, "title": "Bolai Accepts the Order", "start": 453, "end": 463,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "proud", "act": "hand-on-chest-excessive-smile", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আরে বাবু, আমার পরম সৌভাগ্য! তিনশো কেন, পাঁচশো হাঁড়িও একাই তৈরি করে দেবো! তবে এত বড় অর্ডার তো, প্লেট প্রতি দেড়শো টাকা করে লাগবে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S09_SH50", "scene": 9, "title": "Advance Payment", "start": 463, "end": 473,
+      "loc": "BG02", "cam": {"type": "close-up", "mv": "static", "focus": "money bundle"},
+      "chars": [
+        {"id": "C09", "pos": "left", "exp": "calm", "act": "handing-advance", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "shocked-greedy", "act": "receiving-money", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C09", "t": "আরে দাম নিয়ে চিন্তা করবেন না। আপনার নাম শুনেছি বলেই এসেছি। এই নিন কুড়ি হাজার টাকা অগ্রিম। বাকি টাকা অনুষ্ঠানের দিনই দেবো। তবে একটা শর্ত—খাবারের মান আর স্বাদ যেন একদম সেরা হয়!"}
+      ],
+      "fx": ["prop-P08-advance"], "out": "cut"
+    },
+    {
+      "id": "S09_SH51", "scene": 9, "title": "Bolai Promises Quality", "start": 473, "end": 480,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "confident", "act": "hand-on-chest", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "একশো ভাগ গ্যারান্টি বাবু! একবার খেলে শহরের বাবুরাও নাম করবে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S10_SH52", "scene": 10, "title": "Bolai Celebrates", "start": 480, "end": 488,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai jumping"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "proud-greedy", "act": "jumping-happily", "face": "front"},
+        {"id": "C04", "pos": "left", "exp": "worried", "act": "watching-nervously", "face": "right"}
+      ],
+      "dlg": [], "fx": ["money-bundle-glint"], "out": "cut"
+    },
+    {
+      "id": "S10_SH53", "scene": 10, "title": "Bolai Calls Fatik", "start": 488, "end": 498,
+      "loc": "BG02/BG06", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "greedy", "act": "ordering-quantity-gesture", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "শোন ফটিক, বিশাল কাজ জুটেছে! তিনশো হাঁড়ির অর্ডার, কুড়ি হাজার টাকা অ্যাডভান্স পেয়েছি! তুই কাল রাতের মধ্যেই সস্তার এক কুইন্টাল মাংস জোগাড় করে দে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S10_SH54", "scene": 10, "title": "Fatik Offers More Spoiled Meat", "start": 498, "end": 510,
+      "loc": "BG06", "cam": {"type": "medium", "mv": "static", "focus": "Fatik at storage"},
+      "chars": [
+        {"id": "C05", "pos": "center", "exp": "cunning", "act": "showing-frozen-meat", "face": "front"},
+        {"id": "C01", "pos": "left", "exp": "greedy", "act": "listening-eagerly", "face": "right"}
+      ],
+      "dlg": [
+        {"sp": "C05", "t": "এত মাংস একসাথে? আচ্ছা চিন্তা করো না, আমার গুদামে গত সপ্তাহের প্রচুর মাংস বরফে রাখা আছে, একটু গন্ধ বেরোলেও কড়া লাল মশলা, ভিনিগার আর ফুড কালার দিয়ে দিলে একদম টাটকা দেখাবে! তবে সব টাকা আগেই দিতে হবে।"}
+      ],
+      "fx": ["dirty-storage-sacks"], "out": "cut"
+    },
+    {
+      "id": "S10_SH55", "scene": 10, "title": "Bolai Pays Fatik", "start": 510, "end": 516,
+      "loc": "BG06", "cam": {"type": "close-up", "mv": "static", "focus": "money exchange"},
+      "chars": [
+        {"id": "C01", "pos": "left", "exp": "greedy", "act": "handing-money", "face": "right"},
+        {"id": "C05", "pos": "right", "exp": "cunning", "act": "counting-money", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "আরে তাড়াতাড়ি নে এই পনেরো হাজার টাকা, মাল পৌঁছে দিস।"}
+      ],
+      "fx": ["prop-P05-money"], "out": "cut"
+    },
+    {
+      "id": "S10_SH56", "scene": 10, "title": "Warning Ignored", "start": 516, "end": 524,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai turning away"},
+      "chars": [
+        {"id": "C02", "pos": "left", "exp": "worried", "act": "protesting", "face": "right"},
+        {"id": "C04", "pos": "center-left", "exp": "worried", "act": "trying-to-stop", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "turning-away", "face": "away"}
+      ],
+      "dlg": [],
+      "nar": "এদিকে চম্পা এবং তপন হাজার বারণ করা সত্ত্বেও বলাই কারও কথা শুনলো না।",
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S10_SH57", "scene": 10, "title": "Mixing Spoiled Food", "start": 524, "end": 540,
+      "loc": "BG05", "cam": {"type": "top-down-to-closeup", "mv": "descend", "focus": "cauldron"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "greedy", "act": "stirring-cauldron", "face": "down"},
+        {"id": "C04", "pos": "background", "exp": "horrified", "act": "watching", "face": "left"}
+      ],
+      "dlg": [],
+      "nar": "এমনকি আরও খরচ বাঁচাতে সে দোকানের আগের দু’দিনের বেঁচে যাওয়া পচা হান্ডির ঝোলও অনুষ্ঠানের বড় ডেগচিতে ঢেলে মিশিয়ে দিলো!",
+      "fx": ["prop-P09-cauldron", "dark-unappetizing-contents"],
+      "note": "No food preparation glamorization. Visual must communicate danger and negligence.", "out": "cut"
+    },
+    {
+      "id": "S11_SH58", "scene": 11, "title": "Establish Ceremony", "start": 540, "end": 550,
+      "loc": "BG07", "cam": {"type": "extreme-wide", "mv": "static", "focus": "garden house"},
+      "chars": [{"id": "CROWD", "pos": "garden", "act": "arriving"}],
+      "dlg": [], "sfx": ["celebration-ambience", "soft-instrumental"],
+      "fx": ["golden-lights", "decorations"], "out": "cut"
+    },
+    {
+      "id": "S11_SH59", "scene": 11, "title": "Three Hundred Handis Arrive", "start": 550, "end": 562,
+      "loc": "BG07", "cam": {"type": "tracking", "mv": "across-tables", "focus": "handi rows"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "proud", "act": "supervising", "face": "front"},
+        {"id": "C04", "pos": "right", "exp": "worried", "act": "carrying-handis", "face": "front"},
+        {"id": "CROWD", "pos": "background", "act": "carrying-delivery"}
+      ],
+      "dlg": [], "fx": ["handi-rows"], "out": "cut"
+    },
+    {
+      "id": "S11_SH60", "scene": 11, "title": "Raybabu Announces the Special Dish", "start": 562, "end": 572,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Raybabu"},
+      "chars": [
+        {"id": "C09", "pos": "center", "exp": "proud", "act": "raising-hand", "face": "front"},
+        {"id": "CROWD", "pos": "tables", "act": "preparing-to-open-handis"}
+      ],
+      "dlg": [
+        {"sp": "C09", "t": "আসুন সবাই, আজ আমাদের স্পেশাল আকর্ষণ রামনগরের বিখ্যাত সিল-করা মটন হান্ডি! সবাই নিজের নিজের হাঁড়ির আটার সিল খুলুন!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S11_SH61", "scene": 11, "title": "Simultaneous Handi Opening", "start": 572, "end": 582,
+      "loc": "BG07", "cam": {"type": "wide+closeups", "mv": "quick-cuts", "focus": "many hands"},
+      "chars": [{"id": "CROWD", "pos": "tables", "act": "breaking-seals-recoiling"}],
+      "dlg": [],
+      "sfx": ["multiple-clay-lids", "crowd-reaction", "music-stop"],
+      "fx": ["unpleasant-fumes"], "out": "cut"
+    },
+    {
+      "id": "S11_SH62", "scene": 11, "title": "Guests React to Smell", "start": 582, "end": 593,
+      "loc": "BG07", "cam": {"type": "medium+closeups", "mv": "quick-cuts", "focus": "guest reactions"},
+      "chars": [{"id": "GUEST", "pos": "center", "exp": "disgusted", "act": "covering-nose-stepping-back", "face": "front"}],
+      "dlg": [
+        {"sp": "GUEST", "t": "ওরে বাবা! এ কি পচা গন্ধ বেরোচ্ছে রে?! হাঁড়ির মুখ খুলতেই পুরো ঘর গন্ধে ভরে গেল!"}
+      ],
+      "fx": ["fume-waves"], "out": "cut"
+    },
+    {
+      "id": "S11_SH63", "scene": 11, "title": "Spoiled Food Revealed", "start": 593, "end": 603,
+      "loc": "BG07", "cam": {"type": "extreme-close-up", "mv": "static", "focus": "handi contents"},
+      "chars": [{"id": "GUEST", "pos": "edge", "exp": "disgusted", "act": "pointing-at-handi", "face": "front"}],
+      "dlg": [
+        {"sp": "GUEST", "t": "অ্যাঁ! এগুলো কি খাসির মাংস?! এ তো দেখছি পচা চর্বি, বড় বড় আলু, আর তার ভেতর থেকে কালো কালো কী সব ভাসছে!"}
+      ],
+      "fx": ["darkened-meat", "excessive-fat", "discolored-gravy"],
+      "note": "Stylized cartoon visual, NOT graphic decomposition.", "out": "cut"
+    },
+    {
+      "id": "S11_SH64", "scene": 11, "title": "Guests Confront Raybabu", "start": 603, "end": 610,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "guests standing"},
+      "chars": [
+        {"id": "GUEST", "pos": "left", "exp": "angry", "act": "pointing-at-food", "face": "right"},
+        {"id": "C09", "pos": "right", "exp": "shocked", "act": "standing", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "GUEST", "t": "ছিঃ ছিঃ! রায়বাবু, আপনি কি আমাদের পচা-বাসি খাবার খাইয়ে হাসপাতালে পাঠাতে চাইছেন?!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S11_SH65", "scene": 11, "title": "Raybabu Confronts Bolai", "start": 610, "end": 615,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Raybabu turning"},
+      "chars": [
+        {"id": "C09", "pos": "left", "exp": "angry", "act": "finger-pointed", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "shocked", "act": "stepping-backward", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C09", "t": "বলাই! এ কি করেছো তুমি?! সবার সামনে আমার মান-ইজ্জত সব মাটিতে মিশিয়ে দিলে?!"}
+      ],
+      "fx": [], "note": "Dialogue continues in S12_SH66.", "out": "cut"
+    },
+    {
+      "id": "S12_SH66", "scene": 12, "title": "Raybabu Demands an Explanation", "start": 615, "end": 625,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "empty handi"},
+      "chars": [
+        {"id": "C09", "pos": "left", "exp": "angry", "act": "showing-empty-handi", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "terrified", "act": "staring", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C09", "t": "এর জন্যই কি তোমাকে কুড়ি হাজার টাকা দিয়েছিলাম?!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH67", "scene": 12, "title": "Bolai Tries to Escape Blame", "start": 625, "end": 632,
+      "loc": "BG07", "cam": {"type": "mcu", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "nervous", "act": "stammering-looking-around", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আরে বাবু, বিশ্বাস করুন, আমি তো... হয়তো হাঁড়িটা গরমে নষ্ট হয়ে..."}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH68", "scene": 12, "title": "Tapan Steps Forward", "start": 632, "end": 637,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "push-in", "focus": "Tapan"},
+      "chars": [
+        {"id": "C04", "pos": "center", "exp": "determined", "act": "deep-breath-stepping-forward", "face": "front"},
+        {"id": "C01", "pos": "right", "exp": "shocked", "act": "noticing-tapan", "face": "left"}
+      ],
+      "dlg": [], "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH69", "scene": 12, "title": "Tapan Reveals the Truth", "start": 637, "end": 653,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Tapan"},
+      "chars": [
+        {"id": "C04", "pos": "center", "exp": "determined", "act": "pointing-at-bolai", "face": "front"},
+        {"id": "C01", "pos": "right", "exp": "ashamed", "act": "lowering-head", "face": "down"},
+        {"id": "CROWD", "pos": "background", "act": "shocked-exchange-looks"}
+      ],
+      "dlg": [
+        {"sp": "C04", "t": "না বাবু, গরমে নয়! আমি আর চুপ থাকতে পারলাম না। এই বলাইদা বেশি লাভের লোভে ফটিক দালালের কাছ থেকে পচা ছাঁট-মাংস কিনে এনেছে, আর তার সাথে দু’দিনের বাসি ঝোল, সোয়াবিন আর কেমিক্যাল রঙ মিশিয়ে এই হাঁড়ি সিল করেছে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH70", "scene": 12, "title": "Prabhat Gets Angry", "start": 653, "end": 660,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Prabhat"},
+      "chars": [
+        {"id": "C08", "pos": "left", "exp": "furious", "act": "raising-hand", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "ashamed", "act": "avoiding-eye-contact", "face": "down"}
+      ],
+      "dlg": [
+        {"sp": "C08", "t": "কি?! বলাই, তুই সামান্য টাকার লোভে এত বড় প্রতারণা করলি?! আমার গ্রামে এমন ভেজাল ব্যবসায়ীকে আমি প্রশ্রয় দেবো না!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH71", "scene": 12, "title": "Police Arrive", "start": 660, "end": 667,
+      "loc": "BG07", "cam": {"type": "wide", "mv": "static", "focus": "entrance"},
+      "chars": [
+        {"id": "C10", "pos": "center-left", "exp": "stern", "act": "entering", "face": "front"},
+        {"id": "C11", "pos": "center-right", "exp": "serious", "act": "entering", "face": "front"},
+        {"id": "CROWD", "pos": "background", "act": "making-space"},
+        {"id": "C01", "pos": "right", "exp": "frozen", "act": "seeing-police", "face": "left"}
+      ],
+      "dlg": [], "sfx": ["serious-percussion"], "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH72", "scene": 12, "title": "Daroga Recognizes Bolai", "start": 667, "end": 672,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Daroga"},
+      "chars": [
+        {"id": "C10", "pos": "left", "exp": "stern", "act": "pointing-toward-bolai", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "terrified", "act": "stepping-backward", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C10", "t": "এই সেই বলাই! অনেকদিন ধরেই তোমার নামে ক্রেতাদের পেট খারাপের অভিযোগ আসছিল। আজ হাতে-নাতে ধরা পড়লে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S12_SH73", "scene": 12, "title": "Food Officer Inspects the Evidence", "start": 672, "end": 675,
+      "loc": "BG07", "cam": {"type": "close-up", "mv": "static", "focus": "evidence tray"},
+      "chars": [{"id": "C11", "pos": "center", "exp": "serious", "act": "gloves-sampling-evidence", "face": "down"}],
+      "dlg": [],
+      "fx": ["prop-P10-evidence-tray", "prop-P11-gloves"], "out": "cut"
+    },
+    {
+      "id": "S13_SH74", "scene": 13, "title": "Officer's Findings", "start": 675, "end": 685,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Food Officer"},
+      "chars": [
+        {"id": "C11", "pos": "center", "exp": "serious", "act": "examining-sample", "face": "front"},
+        {"id": "CROWD", "pos": "background", "act": "disgusted"},
+        {"id": "C01", "pos": "right", "exp": "sweating-terrified", "act": "standing", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C11", "t": "ভয়ঙ্কর ব্যাপার! এতে পচা অখাদ্য মাংস, নিষিদ্ধ ফুড কালার আর অতিরিক্ত সোডা মেশানো হয়েছে! এটা মানুষের শরীরের জন্য বিষের সমান!"}
+      ],
+      "fx": ["spoiled-handi-pointed"], "out": "cut"
+    },
+    {
+      "id": "S13_SH75", "scene": 13, "title": "Bolai Begs for Forgiveness", "start": 685, "end": 693,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Bolai kneeling"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "crying", "act": "kneeling-joining-hands", "face": "up"}],
+      "dlg": [
+        {"sp": "C01", "t": "দারোগা বাবু, আমাকে ক্ষমা করে দিন! আমার ভুল হয়ে গেছে, আমি আর কখনো এমন কাজ করবো না! আমাকে জেলে পাঠাবেন না স্যার!"}
+      ],
+      "fx": ["gamcha-slipping"], "out": "cut"
+    },
+    {
+      "id": "S13_SH76", "scene": 13, "title": "Daroga Announces Punishment", "start": 693, "end": 703,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Daroga"},
+      "chars": [
+        {"id": "C10", "pos": "left", "exp": "stern", "act": "speaking-firmly", "face": "right"},
+        {"id": "C11", "pos": "center-right", "exp": "serious", "act": "closing-evidence-container", "face": "front"},
+        {"id": "C01", "pos": "right", "exp": "terrified", "act": "flanked-by-officers", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C10", "t": "অপরাধ করার সময় মনে ছিল না? তোমার দোকান আজ থেকেই সিল করে দেওয়া হলো, আর জরিমানা হিসেবে রায়বাবুর পুরো অগ্রিম টাকা ফেরত দিতে হবে! সেই সাথে আইন অনুযায়ী তোমার শাস্তি হবেই!"}
+      ],
+      "fx": [],
+      "note": "Show closure and legal consequences symbolically. Do NOT invent an arrest procedure or specific legal sentence beyond the script.", "out": "cut"
+    },
+    {
+      "id": "S13_SH77", "scene": 13, "title": "Subol Offers Help", "start": 703, "end": 714,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Subol"},
+      "chars": [
+        {"id": "C03", "pos": "center", "exp": "supportive", "act": "folding-hands-gesturing", "face": "front"},
+        {"id": "C09", "pos": "right", "exp": "relieved-curious", "act": "listening", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C03", "t": "রায়বাবু, যদি কিছু মনে না করেন, অতিথিদের তো খিদে পেয়েছে। আমার দোকানে আজ টাটকা দেশি চিকেন হান্ডি আর রুটি তৈরি আছে। আপনি অনুমতি দিলে আমি কোনো টাকা ছাড়াই অতিথিদের খাবারের ব্যবস্থা করে দিই?"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S13_SH78", "scene": 13, "title": "Raybabu Thanks Subol", "start": 714, "end": 720,
+      "loc": "BG07", "cam": {"type": "medium", "mv": "static", "focus": "Raybabu and Subol"},
+      "chars": [
+        {"id": "C09", "pos": "left", "exp": "relieved", "act": "hand-on-shoulder", "face": "right"},
+        {"id": "C03", "pos": "right", "exp": "humble-smile", "act": "smiling", "face": "left"},
+        {"id": "CROWD", "pos": "background", "act": "relieved"}
+      ],
+      "dlg": [
+        {"sp": "C09", "t": "তুমি বাঁচালে বাবা। সৎ মানুষেরাই বিপদের সময় পাশে থাকে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S14_SH79", "scene": 14, "title": "One Month Later", "start": 720, "end": 728,
+      "loc": "BG08", "cam": {"type": "wide", "mv": "calendar-transition", "focus": "house"},
+      "chars": [{"id": "C01", "pos": "veranda", "exp": "defeated", "act": "sitting-head-lowered", "face": "down"}],
+      "dlg": [],
+      "nar": "এক মাস পর। জরিমানা আর সাজা মিটিয়ে বলাই নিঃস্ব হয়ে বাড়ি ফিরেছে। ঘরের দাওয়ায় মাথা নিচু করে বসে আছে। ফটিক ততক্ষণে পুলিশি ভয়ে এলাকা ছেড়ে পালিয়েছে।",
+      "fx": ["calendar-pages", "empty-alley-flashback", "dimmer-lighting"], "out": "cut"
+    },
+    {
+      "id": "S14_SH80", "scene": 14, "title": "Champa Talks to Bolai", "start": 728, "end": 740,
+      "loc": "BG08", "cam": {"type": "medium", "mv": "static", "focus": "couple"},
+      "chars": [
+        {"id": "C02", "pos": "left", "exp": "sad-supportive", "act": "sitting-beside", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "regretful", "act": "looking-at-ground", "face": "down"}
+      ],
+      "dlg": [
+        {"sp": "C02", "t": "আমি তোমাকে কত করে বলেছিলাম গো, শর্টকাটের পথে সুখ থাকে না। আজ দালান বাড়ি তো দূরে থাক, এতদিনের সাজানো দোকানটাও হারিয়ে বসলে!"}
+      ],
+      "fx": ["empty-money-box-foreground"], "out": "cut"
+    },
+    {
+      "id": "S14_SH81", "scene": 14, "title": "Bolai Admits His Mistake", "start": 740, "end": 754,
+      "loc": "BG08", "cam": {"type": "mcu", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "regretful-crying", "act": "wiping-tears", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আমার সব দোষ চম্পা। সুবলকে হিংসা করতে গিয়ে আর রাতারাতি বড়লোক হওয়ার স্বপ্নে আমি অন্ধ হয়ে গেছিলাম। সিল-করা হাঁড়ির ভেতর অন্যকে ঠকাতে গিয়ে নিজেই নিজের কবর খুঁড়লাম!"}
+      ],
+      "fx": ["sealed-handi-symbolic-insert"], "out": "cut"
+    },
+    {
+      "id": "S14_SH82", "scene": 14, "title": "Emotional Silence", "start": 754, "end": 765,
+      "loc": "BG08", "cam": {"type": "medium", "mv": "pull-back", "focus": "both"},
+      "chars": [
+        {"id": "C01", "pos": "right", "exp": "regretful", "act": "silent", "face": "down"},
+        {"id": "C02", "pos": "left", "exp": "sad", "act": "looking-toward-him", "face": "right"}
+      ],
+      "dlg": [], "sfx": ["gentle-instrumental"], "fx": ["window-soft-light"], "out": "cut"
+    },
+    {
+      "id": "S15_SH83", "scene": 15, "title": "Subol and Prabhat Visit", "start": 765, "end": 772,
+      "loc": "BG08-courtyard", "cam": {"type": "medium", "mv": "static", "focus": "courtyard"},
+      "chars": [
+        {"id": "C03", "pos": "left", "exp": "friendly", "act": "entering", "face": "front"},
+        {"id": "C08", "pos": "center-left", "exp": "calm", "act": "entering", "face": "front"},
+        {"id": "C01", "pos": "right", "exp": "surprised-hopeful", "act": "looking-up", "face": "left"},
+        {"id": "C02", "pos": "far-right", "exp": "supportive", "act": "standing-beside", "face": "left"}
+      ],
+      "dlg": [], "fx": [], "out": "cut"
+    },
+    {
+      "id": "S15_SH84", "scene": 15, "title": "Subol Encourages Bolai", "start": 772, "end": 780,
+      "loc": "BG08-courtyard", "cam": {"type": "medium", "mv": "static", "focus": "Subol and Bolai"},
+      "chars": [
+        {"id": "C03", "pos": "left", "exp": "supportive", "act": "hand-on-shoulder", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "grateful", "act": "looking-up", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C03", "t": "বলাইদা, অত ভেঙে পড়ো না। তুমি তো দারুণ রাঁধতে জানো। শুধু লোভটাকে সামলাতে পারোনি।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S15_SH85", "scene": 15, "title": "Prabhat Explains the Value of Trust", "start": 780, "end": 789,
+      "loc": "BG08-courtyard", "cam": {"type": "medium", "mv": "static", "focus": "Prabhat"},
+      "chars": [
+        {"id": "C08", "pos": "left", "exp": "calm", "act": "speaking-calmly", "face": "right"},
+        {"id": "C01", "pos": "center", "exp": "attentive", "act": "listening", "face": "left"},
+        {"id": "C02", "pos": "right", "exp": "hopeful", "act": "small-smile", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C08", "t": "হ্যাঁ বলাই, ভুল মানুষ মাত্রই করে। কিন্তু ভুল থেকে শিক্ষা নিয়ে যে নিজেকে বদলায়, সমাজ তাকে আবার সুযোগ দেয়। তবে একটা কথা মনে রেখো—টাকা হারালে পরিশ্রম করে ফেরত পাওয়া যায়, কিন্তু মানুষের বিশ্বাস একবার ভেঙে গেলে তা ফিরে পেতে অনেক সময় লাগে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S15_SH86", "scene": 15, "title": "Bolai Makes a Promise", "start": 789, "end": 797,
+      "loc": "BG08-courtyard", "cam": {"type": "medium", "mv": "push-in", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "sincere-determined", "act": "standing-joining-hands", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আপনারা ঠিক বলেছেন। আমি আজ সবার সামনে প্রতিজ্ঞা করছি—আর কখনো কোনো খাবারে ভেজাল দেবো না, আর কখনো লোভের বশে মানুষকে ঠকাবো না!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S15_SH87", "scene": 15, "title": "Starting Again", "start": 797, "end": 804,
+      "loc": "BG09", "cam": {"type": "montage", "mv": "warm-cuts", "focus": "new shop"},
+      "chars": [
+        {"id": "C02", "pos": "insert1", "exp": "supportive", "act": "handing-jewellery-box", "face": "front"},
+        {"id": "C03", "pos": "insert2", "exp": "helpful", "act": "moving-counter", "face": "front"},
+        {"id": "C01", "pos": "insert3-5", "exp": "humble-determined", "act": "cleaning-arranging-honest-work", "face": "front"},
+        {"id": "CROWD", "pos": "insert7", "act": "first-customer-hesitant"}
+      ],
+      "dlg": [],
+      "nar": "এরপর বলাই তার স্ত্রী চম্পার গয়না বন্ধক রেখে এবং সুবলের সাহায্যে বাজারের এক কোণায় ছোট করে আবার একটি পরিষ্কার-পরিচ্ছন্ন দোকান শুরু করলো। এবার আর মিথ্যে বিজ্ঞাপন বা কম দামের ফাঁদ নয়—ন্যায্য দামে খাঁটি ও টাটকা খাবার নিয়ে। শুরুতে মানুষ ভয় পেলেও, ধীরে ধীরে বলাইয়ের সততা দেখে ক্রেতারা আবার তার দোকানে ফিরে আসতে শুরু করলো।",
+      "signboard": "বলাইয়ের খাঁটি মটন হান্ডি",
+      "fx": ["fresh-ingredients", "clean-handis", "green-plants"],
+      "note": "TIMING CORRECTION (storyboard Part 7): narration is long; this shot must be extended to fit the recorded voice-over. Storyboard 7s is an underestimate.", "out": "cut"
+    },
+    {
+      "id": "S15_SH88", "scene": 15, "title": "Customers Return", "start": 804, "end": 807,
+      "loc": "BG09", "cam": {"type": "mcu", "mv": "static", "focus": "Soumen"},
+      "chars": [
+        {"id": "C06", "pos": "left", "exp": "happy", "act": "tasting-smiling", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "relieved", "act": "watching", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C06", "t": "বাহ্ বলাইদা! আজ তোমার মটন হান্ডির আসল স্বাদ আর সুগন্ধ ফিরে এসেছে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S15_SH89", "scene": 15, "title": "Bolai's Final Response", "start": 807, "end": 809,
+      "loc": "BG09", "cam": {"type": "mcu", "mv": "static", "focus": "Bolai"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "humble", "act": "smiling-nodding", "face": "front"},
+        {"id": "CROWD", "pos": "background", "act": "nodding"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "তোমাদের বিশ্বাসটাই যে আমার আসল সম্পদ ভাই। এই বিশ্বাস আর কোনোদিন নষ্ট হতে দেবো না!"}
+      ],
+      "fx": [], "out": "fade"
+    },
+    {
+      "id": "S15_SH90", "scene": 15, "title": "Moral and Outro", "start": 809, "end": 810,
+      "loc": "OUTRO", "cam": {"type": "wide", "mv": "fade", "focus": "title card"},
+      "chars": [], "dlg": [],
+      "nar": "লোভ সাময়িক লাভ দেয়, সততা দীর্ঘস্থায়ী বিশ্বাস গড়ে।",
+      "signboard": "লোভ সাময়িক লাভ দেয়, সততা দীর্ঘস্থায়ী বিশ্বাস গড়ে।",
+      "fx": ["warm-background", "title-and-moral-text"],
+      "note": "TIMING CORRECTION (storyboard Part 7): the complete moral narration + outro music REQUIRE extending this sequence well beyond 1s; final duration follows the actual voice-over recording. Extend the episode rather than speeding up speech.", "out": "end"
+    }
+  ]
+}

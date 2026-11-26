@@ -1,0 +1,53 @@
+name: Preview Render
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: 'Remotion composition id to render (e.g. TestClip)'
+        required: true
+        default: 'TestClip'
+      frames:
+        description: 'Optional frame range, e.g. 0-335 (empty = full composition)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure headless browser
+        run: npx remotion browser ensure
+
+      - name: Render preview
+        run: |
+          ARGS=""
+          if [ -n "${{ github.event.inputs.frames }}" ]; then
+            ARGS="--frames=${{ github.event.inputs.frames }}"
+          fi
+          npx remotion render "${{ github.event.inputs.composition }}" "out/${{ github.event.inputs.composition }}.mp4" $ARGS
+
+      - name: Verify output
+        run: |
+          FILE="out/${{ github.event.inputs.composition }}.mp4"
+          test -s "$FILE" || { echo "::error::render output missing: $FILE"; exit 1; }
+          ls -la out/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: preview-${{ github.event.inputs.composition }}
+          path: out/*.mp4
+          if-no-files-found: error

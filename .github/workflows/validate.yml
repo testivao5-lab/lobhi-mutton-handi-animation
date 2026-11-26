@@ -1,0 +1,49 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Validate shot database
+        run: python3 scripts/validate_assets.py
+
+      - name: Secret scan (public repository protection)
+        run: |
+          echo "Scanning for leaked credentials..."
+          if grep -rEn "github_pat_[A-Za-z0-9_]{20,}|ghp_[A-Za-z0-9]{20,}|gho_[A-Za-z0-9]{20,}|ghs_[A-Za-z0-9]{20,}|ghu_[A-Za-z0-9]{20,}" --exclude-dir=node_modules --exclude-dir=.git . ; then
+            echo "::error::Credential-like string found in repository files"
+            exit 1
+          else
+            echo "No secrets found."
+          fi
+
+      - name: Generate draft SRT + shot index
+        run: python3 scripts/generate_srt.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: subtitles-draft
+          path: subtitles/lobhi-mutton-handi-bengali.srt
+          if-no-files-found: error

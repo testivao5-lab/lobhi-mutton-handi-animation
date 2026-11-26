@@ -1,0 +1,18 @@
+# Dependencies & build artifacts
+node_modules/
+out/
+dist/
+build/
+
+# Logs & env (NEVER commit credentials)
+*.log
+.env
+.env.*
+*.local
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Temporary preview dirs (final MP4s are delivered as CI artifacts + Drive backups)
+previews/tmp/

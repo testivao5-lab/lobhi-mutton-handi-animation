@@ -1,0 +1,45 @@
+name: Scene Render (Parallel)
+
+on:
+  workflow_dispatch:
+    inputs:
+      compositions:
+        description: 'JSON array of composition ids, e.g. ["Scene01Market","Scene02Profit"]'
+        required: true
+        default: '["TestClip"]'
+
+permissions:
+  contents: read
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      # Free public repo: standard Linux runner concurrency is 20 jobs.
+      # The pipeline self-caps at 10 to stay safely within limits (master prompt §1).
+      max-parallel: 10
+      matrix:
+        composition: ${{ fromJSON(github.event.inputs.compositions) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure headless browser
+        run: npx remotion browser ensure
+
+      - name: Render ${{ matrix.composition }}
+        run: npx remotion render "${{ matrix.composition }}" "out/${{ matrix.composition }}.mp4"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: scene-${{ matrix.composition }}
+          path: out/${{ matrix.composition }}.mp4
+          if-no-files-found: error

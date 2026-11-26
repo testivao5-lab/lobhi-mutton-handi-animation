@@ -1,0 +1,27 @@
+{
+  "name": "lobhi-mutton-handi-animation",
+  "version": "0.1.0",
+  "private": false,
+  "license": "UNLICENSED",
+  "description": "লোভী মটন হান্ডি ওয়ালা — Bengali 2D animated moral short film (Remotion + React + TypeScript), rendered on GitHub Actions",
+  "scripts": {
+    "dev": "remotion studio",
+    "typecheck": "tsc --noEmit",
+    "render:previz": "remotion render MainEpisode out/previz.mp4",
+    "render:test": "remotion render TestClip out/test-clip.mp4",
+    "render:final": "remotion render MainEpisode out/lobhi-mutton-handi-final-1080p.mp4",
+    "generate:srt": "python3 scripts/generate_srt.py",
+    "validate:assets": "python3 scripts/validate_assets.py"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/google-fonts": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.4"
+  }
+}

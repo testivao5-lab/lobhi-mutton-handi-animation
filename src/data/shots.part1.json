@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "title": "লোভী মটন হান্ডি ওয়ালা",
+    "fps": 24,
+    "width": 1920,
+    "height": 1080,
+    "timingSource": "storyboard-estimate",
+    "storyboardSeconds": 810,
+    "note": "Storyboard Part 7: the recorded Bengali voice-over is the timing master. Current timings are storyboard estimates; the final moral narration (S15_SH87, S15_SH90) must be extended to fit the complete narration audio. Regenerate the SRT after VO recording."
+  },
+  "characters": [
+    {"id": "C01", "name": "Bolai", "bn": "বলাই", "role": "Protagonist, mutton handi seller", "look": "38-42, slight belly, warm brown skin, thick black moustache, mustard-yellow half-sleeve shirt, off-white dhoti, red checked gamcha, brown sandals"},
+    {"id": "C02", "name": "Champa", "bn": "চম্পা", "role": "Bolai's wife", "look": "34-38, oval face, black hair bun, green saree with red border, red blouse, red bindi, bangles"},
+    {"id": "C03", "name": "Subol", "bn": "সুবল", "role": "Honest competitor", "look": "~35, slim-medium, thin moustache, light blue shirt, dark brown trousers, white towel around neck"},
+    {"id": "C04", "name": "Tapan", "bn": "তপন", "role": "Bolai's assistant", "look": "~23, slim, dark brown skin, messy black hair, clean-shaven, light green shirt, dark trousers, small waist towel"},
+    {"id": "C05", "name": "Fatik", "bn": "ফটিক", "role": "Dishonest meat supplier", "look": "42-45, broad stocky, thick moustache, narrow cunning eyes, dark green shirt, brown trousers, dark red gamcha"},
+    {"id": "C06", "name": "Soumen", "bn": "সৌমেন", "role": "Regular customer", "look": "35-40, average build, light cream shirt, dark trousers, friendly face"},
+    {"id": "C07", "name": "Bhavesh Kaka", "bn": "ভবেশ কাকা", "role": "Elderly customer", "look": "60-65, slightly bent, grey hair and moustache, white dhoti, light brown panjabi"},
+    {"id": "C08", "name": "Prabhat Moshai", "bn": "প্রভাত মশাই", "role": "Village elder", "look": "55-60, grey hair, small spectacles, white panjabi, white dhoti, calm authoritative"},
+    {"id": "C09", "name": "Raybabu", "bn": "রায়বাবু", "role": "Wealthy urban businessman", "look": "45-50, fair-medium skin, trimmed moustache, cream panjabi, maroon waistcoat, expensive watch"},
+    {"id": "C10", "name": "Daroga Babu", "bn": "দারোগা বাবু", "role": "Police officer", "look": "middle-aged, khaki uniform, thick moustache, stern, brown belt, police cap"},
+    {"id": "C11", "name": "Food Officer", "bn": "খাদ্য আধিকারিক", "role": "Food safety inspector", "look": "adult male, white/light blue formal shirt, dark trousers, ID card, inspection gloves"},
+    {"id": "GUEST", "name": "Ceremony guests", "bn": "অতিথি", "role": "Crowd voices at the ceremony", "look": "reusable crowd variants, never duplicated identically in one frame"},
+    {"id": "NAR", "name": "Narrator", "bn": "বর্ণনাকারী", "role": "Omniscient narrator", "look": "voice only"},
+    {"id": "CROWD", "name": "Crowd", "bn": "জনতা", "role": "Background villagers", "look": "village male A/B, elderly, female, young customers, ceremony guests, two background children"}
+  ],
+  "shots": [
+    {
+      "id": "S01_SH01", "scene": 1, "title": "Establishing Market", "start": 0, "end": 8,
+      "loc": "BG01", "cam": {"type": "wide", "mv": "push-in", "focus": "market"},
+      "chars": [
+        {"id": "CROWD", "pos": "background", "act": "walking"},
+        {"id": "C01", "pos": "center-right", "exp": "proud", "act": "working", "face": "front"}
+      ],
+      "dlg": [], "fx": ["smoke", "banners-breeze", "bicycle-crossing"],
+      "sfx": ["market-ambience", "birds", "vendors", "fire-crackle"], "out": "push-in"
+    },
+    {
+      "id": "S01_SH02", "scene": 1, "title": "Bolai's Shop Reveal", "start": 8, "end": 16,
+      "loc": "BG02", "cam": {"type": "medium-wide", "mv": "push-in", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "proud", "act": "waving", "face": "front"}],
+      "dlg": [], "fx": ["steam", "fire-flicker"], "out": "cut"
+    },
+    {
+      "id": "S01_SH03", "scene": 1, "title": "Bolai's Sales Pitch", "start": 16, "end": 28,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "happy", "act": "sales-pitch", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আসুন আসুন, চলে আসুন! গরম গরম মাটির হাঁড়িতে দম দেওয়া খাঁটি খাসির মাংস—বলাইয়ের স্পেশাল মটন হান্ডি! একবার এর গন্ধ নাকে গেলে আর বাড়ি ফিরতে ইচ্ছে করবে না!"}
+      ],
+      "fx": ["steam", "fire-flicker"], "out": "cut"
+    },
+    {
+      "id": "S01_SH04", "scene": 1, "title": "Soumen Smells the Food", "start": 28, "end": 35,
+      "loc": "BG02", "cam": {"type": "mcu", "mv": "static", "focus": "Soumen"},
+      "chars": [{"id": "C06", "pos": "center-left", "exp": "happy", "act": "smelling", "face": "right"}],
+      "dlg": [
+        {"sp": "C06", "t": "উফ্ বলাইদা, কি দারুণ গন্ধ বেরোচ্ছে! আমাকে এক হাঁড়ি দাও তো। আর সাথে দুটো রুটি দিও।"}
+      ],
+      "fx": ["steam", "scent-wave"], "out": "cut"
+    },
+    {
+      "id": "S01_SH05", "scene": 1, "title": "Opening the Handi", "start": 35, "end": 43,
+      "loc": "BG02", "cam": {"type": "close-up", "mv": "static", "focus": "handi"},
+      "chars": [{"id": "C01", "pos": "hands-only", "exp": "happy", "act": "breaking-seal", "face": "n/a"}],
+      "dlg": [
+        {"sp": "C01", "t": "এই নাও সৌমেন, তোমার সামনেই গরম হাঁড়ির মুখ খুললাম। দেখেছো, কেমন নরম তুলতুলে খাসির মাংস আর গাঢ় মশলার ঝোল!"}
+      ],
+      "fx": ["steam-burst", "appetizing-food-reveal"], "note": "Genuine handi — contents must look appetizing.", "out": "cut"
+    },
+    {
+      "id": "S01_SH06", "scene": 1, "title": "Soumen Enjoys Food", "start": 43, "end": 52,
+      "loc": "BG02", "cam": {"type": "mcu", "mv": "static", "focus": "Soumen"},
+      "chars": [
+        {"id": "C06", "pos": "center", "exp": "happy", "act": "thumbs-up", "face": "front"},
+        {"id": "C01", "pos": "background", "exp": "proud", "act": "smiling", "face": "front"}
+      ],
+      "dlg": [
+        {"sp": "C06", "t": "বাহ্! বলাইদা, এমন মটন হান্ডি খেতে তো লোককে বড় শহরের রেস্টুরেন্টে যেতে হয়! মাত্র দু’শো টাকায় পুরো এক হাঁড়ি খাসির মাংস—হেব্বি খেতে হয়েছে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S01_SH07", "scene": 1, "title": "Bhavesh's Order", "start": 52, "end": 60,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "counter"},
+      "chars": [
+        {"id": "C07", "pos": "left", "exp": "happy", "act": "ordering", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "proud", "act": "packing", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C07", "t": "ওরে বলাই, আমার জন্য দুটো ছোট হাঁড়ি বেঁধে দে তো! তোর কাকিমা আর নাতিটার জন্য নিয়ে যাবো!"},
+        {"sp": "C01", "t": "একদম ভবেশ কাকা, এক্ষুনি গুছিয়ে দিচ্ছি। বলাইয়ের হাতের রান্নায় কোনো ফাঁকি নেই!"}
+      ],
+      "fx": [], "out": "crossfade-evening"
+    },
+    {
+      "id": "S02_SH08", "scene": 2, "title": "Night Exterior", "start": 60, "end": 65,
+      "loc": "BG03-ext", "cam": {"type": "wide", "mv": "static", "focus": "house"},
+      "chars": [], "dlg": [], "fx": ["moon", "window-glow"], "sfx": ["crickets"], "out": "cut"
+    },
+    {
+      "id": "S02_SH09", "scene": 2, "title": "Counting Money", "start": 65, "end": 75,
+      "loc": "BG03", "cam": {"type": "medium", "mv": "static", "focus": "Bolai at table"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "worried", "act": "counting-money", "face": "down"}],
+      "dlg": [], "fx": ["lamp-flicker"], "sfx": ["money-counting"], "out": "cut"
+    },
+    {
+      "id": "S02_SH10", "scene": 2, "title": "Profit Complaint", "start": 75, "end": 90,
+      "loc": "BG03", "cam": {"type": "close-up", "mv": "push-in", "focus": "Bolai's face"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "frustrated-to-greedy", "act": "complaining", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "ধুর ছাই! সারাদিন আগুনের আঁচে পুড়ে, কুড়িটা হাঁড়ি বেচে লাভ থাকলো মোটে পাঁচশো টাকা? একে খাসির মাংসের দাম আটশো টাকা কিলো, তার ওপর আলাদা করে মাটির হাঁড়ি, কয়লা, ঘি, কাজু-কিশমিশ, গরম মশলা... এভাবে চললে আমার হাতে ছাইও থাকবে না! বড়লোক হওয়া তো দূরের কথা, পাকা বাড়ি করার স্বপ্নই বা কবে পূরণ হবে?"}
+      ],
+      "fx": [], "note": "End: expression shifts from frustration to envy and greed.", "out": "cut"
+    },
+    {
+      "id": "S03_SH11", "scene": 3, "title": "Champa Enters", "start": 90, "end": 98,
+      "loc": "BG03", "cam": {"type": "medium", "mv": "static", "focus": "Champa entering"},
+      "chars": [
+        {"id": "C02", "pos": "left", "exp": "curious", "act": "entering-with-water", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "frustrated", "act": "sitting", "face": "down"}
+      ],
+      "dlg": [
+        {"sp": "C02", "t": "কি গো, এত রাত হয়ে গেল, এখনো হিসেবের খাতা নিয়ে বসে আছো কেন?"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S03_SH12", "scene": 3, "title": "Bolai Explains", "start": 98, "end": 112,
+      "loc": "BG03", "cam": {"type": "over-shoulder", "mv": "static", "focus": "Bolai"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "frustrated", "act": "pointing-ledger", "face": "left"},
+        {"id": "C02", "pos": "foreground-left", "exp": "worried", "act": "listening", "face": "right"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "আর বলো না গিন্নি! এত কষ্ট করে ওই 'স্পেশাল মটন হান্ডি' বানিয়েও লাভের অঙ্কটা বাড়ছে না। মাটির হাঁড়ি আর খাঁটি ঘি-মশলার পেছনেই অর্ধেক টাকা উড়ে যাচ্ছে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S03_SH13", "scene": 3, "title": "Champa's Advice", "start": 112, "end": 124,
+      "loc": "BG03", "cam": {"type": "mcu", "mv": "static", "focus": "Champa"},
+      "chars": [{"id": "C02", "pos": "center", "exp": "supportive", "act": "explaining-calmly", "face": "right"}],
+      "dlg": [
+        {"sp": "C02", "t": "তা যাক না। কম লাভ হলেও তোমার দোকানের নাম তো সারা তল্লাটে ছড়িয়ে পড়েছে। মানুষ তোমার খাবারের মানের ওপর ভরসা করেই আসে। মানুষের বিশ্বাস থাকলে ব্যবসা এমনিই বড় হবে।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S03_SH14", "scene": 3, "title": "Bolai Rejects Advice", "start": 124, "end": 135,
+      "loc": "BG03", "cam": {"type": "medium", "mv": "push-in", "focus": "Bolai"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "angry", "act": "waving-dismissively", "face": "front"},
+        {"id": "C02", "pos": "left", "exp": "disappointed", "act": "listening", "face": "right"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "উফ্! তুমি শুধু ওই এক বস্তাপচা কথা বলো—বিশ্বাস আর সততা! বাজারের ওই সাধন, ভীমকে দেখো না, কেমন শর্টকাট বুদ্ধি খাটিয়ে দু’বছরে দোতলা বাড়ি তুলে ফেললো!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S04_SH15", "scene": 4, "title": "Champa's Final Warning", "start": 135, "end": 143,
+      "loc": "BG03", "cam": {"type": "mcu", "mv": "static", "focus": "Champa"},
+      "chars": [
+        {"id": "C02", "pos": "left", "exp": "supportive", "act": "warning-directly", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "suspicious", "act": "avoiding-eye-contact", "face": "away"}
+      ],
+      "dlg": [
+        {"sp": "C02", "t": "ওসব অসৎ লোকের দেখাদেখি কোরো না তো। শর্টকাটে টাকা এলে তা বেশিদিন টিকে থাকে না। নিজের ভালো চাইলে সৎপথেই থাকো।"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S04_SH16", "scene": 4, "title": "Narrator Transition", "start": 143, "end": 150,
+      "loc": "BG03-to-BG01", "cam": {"type": "wide", "mv": "fade-transition", "focus": "Bolai silent"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "greedy", "act": "sitting-silent", "face": "down"}],
+      "dlg": [],
+      "nar": "চম্পা অনেক বোঝালেও বলাইয়ের মন তখন শর্টকাট লাভের দিকেই ঝুঁকে পড়েছে। আর ঠিক পরদিনই বাজারে ঘটে এমন এক ঘটনা, যা বলাইয়ের লোভকে আরও উসকে দেয়।",
+      "fx": ["morning-fade-in"], "out": "fade"
+    },
+    {
+      "id": "S04_SH17", "scene": 4, "title": "Subol's New Shop", "start": 150, "end": 159,
+      "loc": "BG04", "cam": {"type": "wide", "mv": "static", "focus": "Subol's stall"},
+      "chars": [
+        {"id": "C03", "pos": "center", "exp": "happy", "act": "calling-customers", "face": "front"},
+        {"id": "CROWD", "pos": "around-stall", "act": "gathering"}
+      ],
+      "dlg": [
+        {"sp": "C03", "t": "আসুন দাদা, আসুন কাকা! খাঁটি দেশি মুরগির চিকেন হান্ডি খেয়ে যান! মাত্র একশো কুড়ি টাকায় পুরো মাটির হাঁড়ি ভর্তি চিকেন হান্ডি—একদম ঘরের মশলায় তৈরি!"}
+      ],
+      "fx": ["blue-canopy", "steam"], "out": "cut"
+    },
+    {
+      "id": "S04_SH18", "scene": 4, "title": "Bolai Notices Customers Leaving", "start": 159, "end": 168,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "shocked-angry", "act": "pointing", "face": "right"}],
+      "dlg": [
+        {"sp": "C01", "t": "অ্যাঁ?! এই সুবল ছোঁড়া কোত্থেকে এসে আমার হাঁড়ি-ব্যবসার নকল করলো?! আমার দোকানের পাশে দাঁড়িয়ে একশো কুড়ি টাকায় হান্ডি বেচছে?!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S04_SH19", "scene": 4, "title": "Tapan Reports", "start": 168, "end": 174,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Tapan and Bolai"},
+      "chars": [
+        {"id": "C04", "pos": "left", "exp": "worried", "act": "gesturing-crowd", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "suspicious", "act": "watching", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C04", "t": "বলাইদা, দেখছো? কম দামের জন্য কত লোক সুবলের দোকানে ভিড় করছে! আমাদের হাঁড়ির দাম দু’শো টাকা বলে অনেকেই আজ ওদিকে যাচ্ছে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S04_SH20", "scene": 4, "title": "Bolai Makes a Plan", "start": 174, "end": 180,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "greedy", "act": "clenching-fist-sly-smile", "face": "front"},
+        {"id": "C04", "pos": "left", "exp": "shocked", "act": "listening", "face": "right"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "হুঁহ! চিকেন হান্ডি দিয়ে আমাকে টেক্কা দেবে? আমিও এবার এমন খেলা খেলবো যে ওই সুবলের দোকান বন্ধ হয়ে যাবে! কাল থেকেই আমার দোকানেও বোর্ড ঝোলানো হবে—মাত্র একশো টাকায় স্পেশাল মটন হান্ডি!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S05_SH21", "scene": 5, "title": "Tapan Questions the Price", "start": 180, "end": 192,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Tapan and Bolai"},
+      "chars": [
+        {"id": "C04", "pos": "left", "exp": "shocked", "act": "raising-hands", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "confident-smile", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C04", "t": "কি বলছো বলাইদা?! একশো টাকায় মটন হান্ডি?! খাসির মাংসের যা দাম, তাতে একশো টাকায় দিলে তো তোমার ঘরবাড়ি বিক্রি হয়ে যাবে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S05_SH22", "scene": 5, "title": "Bolai's Secret Plan", "start": 192, "end": 200,
+      "loc": "BG02", "cam": {"type": "medium-to-handi", "mv": "push-toward-handi", "focus": "sealed handi"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "greedy", "act": "sly-wink-pointing", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আরে বোকা, হাঁড়ির মুখ তো আটা দিয়ে সিল করা থাকে! ভেতরে কি আছে, তা কি আর বাইরে থেকে দেখা যায়? তুই শুধু দেখে যা আমি কি করি!"}
+      ],
+      "fx": ["camera-toward-handi"], "out": "cut"
+    },
+    {
+      "id": "S05_SH23", "scene": 5, "title": "The Deceptive Preparation", "start": 200, "end": 210,
+      "loc": "BG05", "cam": {"type": "top-down", "mv": "static", "focus": "handi ingredients"},
+      "chars": [{"id": "C01", "pos": "hands-only", "exp": "greedy", "act": "adding-potatoes-soybean-fat", "face": "n/a"}],
+      "dlg": [],
+      "fx": ["ladle-motion", "meat-hidden-under-potatoes"],
+      "note": "Show deception clearly WITHOUT making the process look like an appealing recipe.", "out": "cut"
+    },
+    {
+      "id": "S05_SH24", "scene": 5, "title": "Champa Discovers Fraud", "start": 210, "end": 219,
+      "loc": "BG05", "cam": {"type": "medium", "mv": "static", "focus": "Champa at kitchen"},
+      "chars": [
+        {"id": "C02", "pos": "left", "exp": "shocked-angry", "act": "pointing-at-handi", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "preparing", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C02", "t": "এ কি করছো তুমি?! এক হাঁড়িতে মাত্র তিন টুকরো খাসির মাংস দিচ্ছো, আর বাকি পুরো হাঁড়িটা বড় বড় আলু, চর্বি আর সয়াবিনের টুকরো দিয়ে ভরে দিচ্ছো?!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S05_SH25", "scene": 5, "title": "Bolai Admits His Trick", "start": 219, "end": 228,
+      "loc": "BG05", "cam": {"type": "medium", "mv": "static", "focus": "Bolai whispering"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "greedy", "act": "lowering-voice-smirk", "face": "left"}],
+      "dlg": [
+        {"sp": "C01", "t": "চুপ করো চম্পা! এটাই তো আসল কারসাজি। মাটির হাঁড়ির ভেতর থেকে শুধু খাসির চর্বি আর কেওড়া জলের গন্ধ বেরোবে, আর ওপরে দুটো ছোট মাংসের টুকরো ভাসবে! ক্রেতারা একশো টাকার লোভে হুমড়ি খেয়ে পড়বে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S05_SH26", "scene": 5, "title": "Champa Condemns the Fraud", "start": 228, "end": 235,
+      "loc": "BG05", "cam": {"type": "mcu", "mv": "static", "focus": "Champa"},
+      "chars": [
+        {"id": "C02", "pos": "left", "exp": "disgusted", "act": "condemning", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "ignoring", "face": "away"}
+      ],
+      "dlg": [
+        {"sp": "C02", "t": "ছিঃ! এ তো সোজাসুজি প্রতারণা! মানুষ একশো টাকা দিয়ে মটন হান্ডি কিনবে, আর হাঁড়ি খুলে পাবে শুধু আলু আর চর্বি? এতে তোমার বদনাম হয়ে যাবে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S05_SH27", "scene": 5, "title": "Fake Ingredients and New Signboard", "start": 235, "end": 240,
+      "loc": "BG05-to-BG02", "cam": {"type": "inserts", "mv": "quick-cuts", "focus": "ingredients, signboard"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "greedy", "act": "sealing-handi", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আর কেউ কিছু বুঝবে না! সব তো আটা দিয়ে সিল করা থাকছে। তাছাড়া আমি আজকে খাঁটি ঘি-এর বদলে ডালডা আর সস্তা লাল রঙ ব্যবহার করছি।"}
+      ],
+      "signboard": "বাম্পার অফার! মাত্র ১০০ টাকায় স্পেশাল মটন হান্ডি!",
+      "fx": ["dalda-insert", "cheap-color-insert"], "out": "cut"
+    },
+    {
+      "id": "S06_SH28", "scene": 6, "title": "Narrator Introduces the Scheme", "start": 240, "end": 252,
+      "loc": "BG02", "cam": {"type": "wide", "mv": "static", "focus": "queues"},
+      "chars": [
+        {"id": "CROWD", "pos": "queue", "act": "lining-up"},
+        {"id": "C01", "pos": "counter", "exp": "proud", "act": "collecting-money", "face": "front"},
+        {"id": "C03", "pos": "background", "exp": "calm", "act": "quiet-stall", "face": "front"}
+      ],
+      "dlg": [],
+      "nar": "চম্পার বারণ উপেক্ষা করে বলাই দোকানের সামনে বড় বোর্ড টাঙালো—বাম্পার অফার! মাত্র ১০০ টাকায় স্পেশাল মটন হান্ডি! কম দামের লোভে সুবলের দোকানের ভিড় সরে এসে বলাইয়ের দোকানের সামনে লম্বা লাইন পড়ে গেল। কিন্তু কিছুক্ষণ পরই বলাইয়ের দেখা হলো এক চতুর লোকের সাথে।",
+      "fx": ["signboard-prominent"], "out": "cut"
+    },
+    {
+      "id": "S06_SH29", "scene": 6, "title": "Fatik Appears", "start": 252, "end": 260,
+      "loc": "BG06", "cam": {"type": "low-angle", "mv": "static", "focus": "Fatik"},
+      "chars": [{"id": "C05", "pos": "center", "exp": "cunning", "act": "stepping-into-light", "face": "front"}],
+      "dlg": [], "sfx": ["suspense-sting"], "fx": ["dim-lamp", "shadowy"], "out": "cut"
+    },
+    {
+      "id": "S06_SH30", "scene": 6, "title": "Fatik Questions Bolai", "start": 260, "end": 271,
+      "loc": "BG06", "cam": {"type": "medium", "mv": "static", "focus": "Fatik"},
+      "chars": [
+        {"id": "C05", "pos": "left", "exp": "cunning", "act": "folding-arms-leaning", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "shocked", "act": "listening", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C05", "t": "কি বলাইদা, একশো টাকায় মটন হান্ডি বেচে তো বাজার কাঁপিয়ে দিয়েছো দেখছি! কিন্তু আলু আর চর্বি দিয়ে আর ক’দিন চালাবে? ক্রেতারা তো দু’দিন পর ধরে ফেলবে!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S06_SH31", "scene": 6, "title": "Bolai Is Surprised", "start": 271, "end": 276,
+      "loc": "BG06", "cam": {"type": "close-up", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "shocked", "act": "head-turn", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "তুই জানলি কি করে?!"}
+      ],
+      "fx": ["sweat-drop-optional"], "out": "cut"
+    },
+    {
+      "id": "S06_SH32", "scene": 6, "title": "Fatik Offers Cheap Meat", "start": 276, "end": 289,
+      "loc": "BG06", "cam": {"type": "medium", "mv": "alternate-faces", "focus": "both"},
+      "chars": [
+        {"id": "C05", "pos": "left", "exp": "cunning", "act": "finger-gesture", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "leaning-in", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C05", "t": "আরে ভাই, আমিও এই লাইনেরই পুরনো খেলোয়াড়। শোনো, আমার কাছে একটা দারুণ রাস্তা আছে। তুমি বাজার থেকে আটশো টাকায় মাংস না কিনে, আমার কাছ থেকে আড়াইশো টাকা কিলো দরে মাংস নাও!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S06_SH33", "scene": 6, "title": "Bolai Questions the Offer", "start": 289, "end": 293,
+      "loc": "BG06", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "suspicious-curious", "act": "leaning-closer", "face": "left"}],
+      "dlg": [
+        {"sp": "C01", "t": "আড়াইশো টাকায় খাসির মাংস?! কিন্তু কিভাবে?"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S06_SH34", "scene": 6, "title": "Fatik Reveals the Meat Source", "start": 293, "end": 300,
+      "loc": "BG06", "cam": {"type": "close-up", "mv": "static", "focus": "sack then Bolai's eyes"},
+      "chars": [
+        {"id": "C05", "pos": "left", "exp": "cunning", "act": "opening-sack", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "staring-at-sack", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C05", "t": "শহরের বড় বড় কসাইখানা আর হোটেলের বেঁচে যাওয়া বাসি, আধ-নষ্ট ছাঁট-মাংস আর বরফে জমা পুরনো মাংস আমি কম দামে তুলে আনি। তুমি কড়া লাল লঙ্কা, রসুন বাটা আর গরম মশলা দিয়ে মাটির হাঁড়ির মুখ সিল করে দম দেবে..."}
+      ],
+      "fx": ["unappetizing-meat"], "note": "Dialogue continues in S07_SH35.", "out": "cut"
+    },
+    {
+      "id": "S07_SH35", "scene": 7, "title": "Fatik Explains Concealment", "start": 300, "end": 310,
+      "loc": "BG06", "cam": {"type": "medium", "mv": "static", "focus": "Fatik"},
+      "chars": [
+        {"id": "C05", "pos": "left", "exp": "cunning", "act": "sealing-gesture-quiet-laugh", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "greedy", "act": "listening-carefully", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C05", "t": "সিল খোলার পর এমন ঝাঁঝালো গন্ধ বেরোবে যে কেউ বাপের জন্মেও ধরতে পারবে না মাংসটা আসল না বাসি!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S07_SH36", "scene": 7, "title": "Bolai Accepts the Deal", "start": 310, "end": 320,
+      "loc": "BG06", "cam": {"type": "medium", "mv": "static", "focus": "handshake"},
+      "chars": [
+        {"id": "C01", "pos": "left", "exp": "greedy", "act": "rubbing-hands-handshake", "face": "right"},
+        {"id": "C05", "pos": "right", "exp": "cunning", "act": "handshake-sly-smile", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "আড়াইশো টাকা কিলো?! তাহলে তো একশো টাকায় বেচেও আমার পকেট টাকায় ভরে যাবে! ঠিক আছে ফটিক, কাল থেকেই তুই আমার দোকানে ওই মাংস পাঠাবি!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S07_SH37", "scene": 7, "title": "Time Passing Montage", "start": 320, "end": 335,
+      "loc": "BG02+BG06", "cam": {"type": "montage", "mv": "quick-cuts", "focus": "transactions"},
+      "chars": [
+        {"id": "C05", "pos": "delivery", "exp": "cunning", "act": "delivering-sacks", "face": "front"},
+        {"id": "C01", "pos": "shop", "exp": "greedy", "act": "receiving-counting", "face": "front"},
+        {"id": "CROWD", "pos": "queue", "act": "buying-handis"}
+      ],
+      "dlg": [],
+      "fx": ["daylight-shifts", "flour-seals", "money-growing"],
+      "note": "Make passing days clear through different daylight and repeated transactions.", "out": "cut"
+    },
+    {
+      "id": "S07_SH38", "scene": 7, "title": "Soumen Tastes the Food", "start": 335, "end": 347,
+      "loc": "BG02", "cam": {"type": "mcu", "mv": "static", "focus": "Soumen"},
+      "chars": [{"id": "C06", "pos": "center", "exp": "confused-disgusted", "act": "stopping-chewing-inspecting", "face": "front"}],
+      "dlg": [
+        {"sp": "C06", "t": "বলাইদা, আজকের মাংসটা কেমন যেন টক-টক আর রাবারের মতো লাগছে কেন? আর হাঁড়ির নিচে এত আলু আর চর্বি কেন?"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S07_SH39", "scene": 7, "title": "Bolai Lies", "start": 347, "end": 357,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [{"id": "C01", "pos": "center", "exp": "nervous-fake-smile", "act": "waving-hand-avoiding-eyes", "face": "front"}],
+      "dlg": [
+        {"sp": "C01", "t": "আরে সৌমেন, একশো টাকায় দিচ্ছি বলে একটু মশলা বেশি দিয়েছি, আর দই-এর পরিমাণ বেশি পড়েছে বলে হয়তো একটু টক লাগছে! তাছাড়া খাসির মাংসের সাথে আলু আর চর্বি না থাকলে কি আর হান্ডির স্বাদ খোলে?"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S07_SH40", "scene": 7, "title": "Bhavesh Complains", "start": 357, "end": 370,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bhavesh"},
+      "chars": [
+        {"id": "C07", "pos": "left", "exp": "disgusted", "act": "stirring-handi-holding-stomach", "face": "right"},
+        {"id": "C01", "pos": "right", "exp": "nervous", "act": "listening", "face": "left"}
+      ],
+      "dlg": [
+        {"sp": "C07", "t": "না হে বলাই, তোমার কথাবার্তা সুবিধের ঠেকছে না। আমার তো বমি ভাব আসছে। আগে দু’শো টাকা নিয়েও যে মাংস দিতে, তার এক ছটাকও এখন নেই! আজকাল কি পচা মাংস খাওয়াচ্ছো নাকি?"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S07_SH41", "scene": 7, "title": "Bolai Insults Customers", "start": 370, "end": 380,
+      "loc": "BG02", "cam": {"type": "medium", "mv": "static", "focus": "Bolai"},
+      "chars": [
+        {"id": "C01", "pos": "center", "exp": "angry", "act": "pointing-exit", "face": "left"},
+        {"id": "C07", "pos": "left", "exp": "upset", "act": "standing", "face": "right"},
+        {"id": "CROWD", "pos": "background", "act": "watching-upset"}
+      ],
+      "dlg": [
+        {"sp": "C01", "t": "দেখুন কাকা, একশো টাকায় রাজভোগ আশা করবেন না! ভালো না লাগলে ওই সুবলের দোকানে গিয়ে মুরগির ঝোল খান গিয়ে যান! আমার দোকানে খদ্দেরের অভাব নেই!"}
+      ],
+      "fx": [], "out": "cut"
+    },
+    {
+      "id": "S07_SH42", "scene": 7, "title": "Customers Leave", "start": 380, "end": 390,
+      "loc": "BG02", "cam": {"type": "wide", "mv": "static", "focus": "customers walking out"},
+      "chars": [
+        {"id": "C07", "pos": "left", "exp": "angry", "act": "walking-away", "face": "away"},
+        {"id": "C06", "pos": "center-left", "exp": "disappointed", "act": "following", "face": "away"},
+        {"id": "C01", "pos": "right", "exp": "irritated", "act": "watching", "face": "left"},
+        {"id": "CROWD", "pos": "background", "act": "concerned"}
+      ],
+      "dlg": [
+        {"sp": "C07", "t": "তোর যেমন খাবার, তেমনই মুখের ভাষা! চল সৌমেন, এই বদমাশটার দোকানে আর কোনোদিন পা রাখবো না!"}
+      ],
+      "fx": [], "out": "cut"
+    }
+  ]
+}

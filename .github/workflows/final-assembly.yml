@@ -1,0 +1,46 @@
+name: Final Assembly
+
+on:
+  workflow_dispatch:
+    inputs:
+      scene_order:
+        description: 'Comma-separated scene mp4 basenames in story order (artifacts named scene-*)'
+        required: true
+        default: 'TestClip'
+
+permissions:
+  contents: read
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download scene artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: scene-*
+          merge-multiple: true
+          path: scenes/
+
+      - name: Assemble + QC
+        run: |
+          ls -la scenes/
+          IFS=',' read -ra ORDER <<< "${{ github.event.inputs.scene_order }}"
+          : > concat.txt
+          for s in "${ORDER[@]}"; do
+            F="scenes/${s}.mp4"
+            test -s "$F" || { echo "::error::missing scene file: $F"; exit 1; }
+            echo "file '$F'" >> concat.txt
+          done
+          ffmpeg -y -f concat -safe 0 -i concat.txt -c copy assembled.mp4
+          echo "---- QC probe ----"
+          ffprobe -v error -show_entries format=duration,size -show_entries stream=codec_name,width,height,r_frame_rate -of default=nw=1 assembled.mp4
+          # Subtitles are NEVER burned in (master prompt §11). SRT ships separately.
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: assembled
+          path: assembled.mp4
+          if-no-files-found: error
