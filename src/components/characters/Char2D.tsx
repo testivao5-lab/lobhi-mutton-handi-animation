@@ -242,11 +242,11 @@ export const Char2D: React.FC<{
     <svg viewBox="0 0 200 330" width={width} height={(width * 330) / 200} style={style} overflow="visible">
       <g transform={`translate(0 ${-bob})`}>
         {/* far leg */}
-        <g transform={`rotate(${legL} 92 208)`}>
-          <path d="M 87 206 L 84 252 L 92 252 L 94 206 Z" fill={cfg.skinShade} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
-          <g transform={`rotate(${kneeL} 88 252)`}>
-            <path d="M 84 250 L 82 296 L 90 296 L 91 250 Z" fill={cfg.skinShade} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
-            <ellipse cx={86} cy={299} rx={9} ry={3.6} fill={INK} />
+        <g transform={`rotate(${legL} 92 190)`}>
+          <path d="M 87 188 L 84 232 L 92 232 L 94 188 Z" fill={cfg.skinShade} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
+          <g transform={`rotate(${kneeL} 88 232)`}>
+            <path d="M 84 230 L 82 276 L 90 276 L 91 230 Z" fill={cfg.skinShade} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
+            <ellipse cx={86} cy={279} rx={9} ry={3.6} fill={INK} />
           </g>
         </g>
         {/* far arm */}
@@ -291,11 +291,11 @@ export const Char2D: React.FC<{
         </g>
 
         {/* near leg */}
-        <g transform={`rotate(${legR} 108 208)`}>
-          <path d="M 104 206 L 108 252 L 116 252 L 112 206 Z" fill={skin} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
-          <g transform={`rotate(${kneeR} 112 252)`}>
-            <path d="M 109 250 L 110 296 L 118 296 L 115 250 Z" fill={skin} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
-            <ellipse cx={115} cy={299} rx={9.6} ry={3.8} fill={INK} />
+        <g transform={`rotate(${legR} 108 190)`}>
+          <path d="M 104 188 L 108 232 L 116 232 L 112 188 Z" fill={skin} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
+          <g transform={`rotate(${kneeR} 112 232)`}>
+            <path d="M 109 230 L 110 276 L 118 276 L 115 230 Z" fill={skin} stroke={INK} strokeWidth={INKW - 0.6} strokeLinejoin="round" />
+            <ellipse cx={115} cy={279} rx={9.6} ry={3.8} fill={INK} />
           </g>
         </g>
 

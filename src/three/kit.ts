@@ -109,7 +109,7 @@ export function awning(width: number, depth = 1.3, colors: string[] = [PAL.awnin
     g.add(s);
   }
   const bar = box(width, 0.08, 0.08, PAL.woodDeep, {edges: true});
-  bar.position.set(0, -depth * 0.42 - 0.05, depth - 0.1);
+  bar.position.set(0, -Math.sin(0.42) * depth * 0.5 - 0.02, depth / 2 - 0.12 + Math.cos(0.42) * depth * 0.5);
   bar.rotation.x = 0.42;
   g.add(bar);
   return g;
