@@ -1,0 +1,28 @@
+{
+  "_meta": "VO = timing master (SKILL A). Filled per sentence as VO assets are produced; times from real audio (mp3 frame parsing), never estimated when audio exists.",
+  "sentences": [
+    {
+      "id": "S01_SH03",
+      "shot": "S01_SH03",
+      "speaker": "bolai",
+      "voice": "voice-11",
+      "audio": "public/audio/dialogue/S01_SH03_bolai.mp3",
+      "text_bn": "নিজের হাতে বানানো মটন হাঁড়ি — যেমন হাঁড়ির মতন ঠান্ডা না হয়ে চলতেই থাকে কাহিনি!",
+      "start_s": 0.0,
+      "end_s": 4.2,
+      "_timing_source": "PLACEHOLDER — re-time from real audio before scene lock"
+    },
+    {
+      "id": "S04_SH16",
+      "shot": "S04_SH16",
+      "speaker": "narrator",
+      "voice": "voice-10",
+      "audio": "public/audio/narration/S04_SH16_narrator.mp3",
+      "text_bn": "সতর্কতা ও বিশ্বাসই একমাত্র পথ — প্রতারণা কখনো দীর্ঘস্থায়ী হয় না।",
+      "start_s": 0.0,
+      "end_s": 4.0,
+      "_timing_source": "PLACEHOLDER — re-time from real audio before scene lock"
+    }
+  ],
+  "CUTS": []
+}
