@@ -154,10 +154,10 @@ export const FaceReal: React.FC<{cx?: number; cy?: number; scale?: number}> = ({
     <Ear x={488} y={246} flip />
     {/* --- brows --- */}
     <Brow x={366} y={198} />
-    <Brow x={428} y={198} flip />
+    <Brow x={474} y={198} flip />
     {/* --- eyes --- */}
     <Eye x={362} y={238} />
-    <Eye x={428} y={238} flip />
+    <Eye x={474} y={238} flip />
     {/* --- nose --- */}
     <g>
       <path d="M 414 232 C 412 254 410 270 404 282 C 402 286 404 290 409 291 L 431 291 C 436 290 438 286 436 282 C 430 270 428 254 426 232" fill={SKIN} stroke={INK} strokeWidth={3.2} strokeLinejoin="round" />
