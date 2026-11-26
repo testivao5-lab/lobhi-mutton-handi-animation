@@ -378,22 +378,24 @@ export function foodCounter(w = 3.4): THREE.Group {
   const top = box(w + 0.12, 0.09, 1.08, PAL.woodDeep, {edges: true});
   top.position.y = 1.06;
   g.add(top);
-  // glass case
-  const glass = new THREE.Mesh(new THREE.BoxGeometry(w * 0.92, 0.62, 0.8), new THREE.MeshBasicMaterial({color: '#cfe3e8', transparent: true, opacity: 0.28}));
-  glass.position.set(0, 1.42, 0);
+  // glass case (D-007 fix: compact, frame supported by posts at corners)
+  const glass = new THREE.Mesh(new THREE.BoxGeometry(w * 0.78, 0.5, 0.78), new THREE.MeshBasicMaterial({color: '#cfe3e8', transparent: true, opacity: 0.26}));
+  glass.position.set(0, 1.36, 0);
   g.add(glass);
-  const glFrame = box(w * 0.95, 0.05, 0.85, PAL.woodDeep, {edges: false});
-  glFrame.position.set(0, 1.74, 0);
-  g.add(glFrame);
-  for (const px of [-w * 0.44, w * 0.44]) {
-    const post = box(0.07, 0.72, 0.07, PAL.woodDeep, {edges: false});
-    post.position.set(px, 1.4, 0.36);
-    g.add(post);
+  const glTop = box(w * 0.84, 0.06, 0.84, PAL.woodDeep, {edges: true});
+  glTop.position.set(0, 1.63, 0);
+  g.add(glTop);
+  for (const px of [-w * 0.39, w * 0.39]) {
+    for (const pz of [-0.34, 0.34]) {
+      const post = box(0.06, 0.56, 0.06, PAL.woodDeep, {edges: false});
+      post.position.set(px, 1.35, pz);
+      g.add(post);
+    }
   }
-  // handis on display
-  for (const [hx, hs] of [[-w * 0.28, 0.7], [w * 0.1, 0.82], [w * 0.32, 0.62]] as const) {
+  // handis on display (D-007: scaled to the case, not oversize)
+  for (const [hx, hs] of [[-w * 0.24, 0.42], [w * 0.06, 0.5], [w * 0.28, 0.38]] as const) {
     const h = handi(hs);
-    h.position.set(hx, 1.1, 0.05);
+    h.position.set(hx, 1.11, 0);
     g.add(h);
   }
   const shadow = contactShadow(w * 0.55);

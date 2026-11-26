@@ -129,7 +129,7 @@ export function buildVillage(opts: VillageOpts): World {
   counter.rotation.y = -0.28;
   scene.add(counter);
   // big cooking handi beside entrance (steaming hero prop)
-  const heroHandi = handi(1.5);
+  const heroHandi = handi(1.15);
   heroHandi.position.set(15.4, 0, 1.0);
   scene.add(heroHandi);
 
