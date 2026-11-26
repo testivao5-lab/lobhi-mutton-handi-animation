@@ -58,10 +58,12 @@ export const Stage: React.FC<{
   const worldRef = useRef<World | null>(null);
   const composerRef = useRef<EffectComposer | null>(null);
   const bokehRef = useRef<BokehPass | null>(null);
+  const [built, setBuilt] = useState(false);
   const [chars, setChars] = useState<ProjectedChar[]>([]);
 
   useEffect(() => {
     if (!canvasRef.current || worldDeps === null) return;
+    let disposed = false;
     const renderer = new THREE.WebGLRenderer({canvas: canvasRef.current, antialias: true});
     renderer.setSize(width, height, false);
     renderer.setPixelRatio(1);
@@ -77,11 +79,14 @@ export const Stage: React.FC<{
     composer.addPass(new OutputPass());
     composerRef.current = composer;
     bokehRef.current = bokeh;
+    setBuilt(true); // re-render so the frame layout effect picks up the world
     return () => {
+      disposed = true;
       composer.dispose();
       renderer.dispose();
       worldRef.current = null;
       composerRef.current = null;
+      setBuilt(false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [worldDeps, width, height]);
@@ -90,7 +95,7 @@ export const Stage: React.FC<{
     const world = worldRef.current;
     const composer = composerRef.current;
     const bokeh = bokehRef.current;
-    if (!world || !composer || !bokeh) return;
+    if (!built || !world || !composer || !bokeh) return;
     world.tick(frame);
     // DOF focus follows the look-at distance (SKILL: DOF focused at look-at distance)
     const target = world.lookTarget(frame);
@@ -129,7 +134,8 @@ export const Stage: React.FC<{
       };
     });
     setChars(out);
-  }, [frame, width, height]);
+
+  }, [frame, built, width, height]);
 
   return (
     <AbsoluteFill style={{backgroundColor: '#f7c268'}}>
@@ -139,11 +145,19 @@ export const Stage: React.FC<{
   );
 };
 
-/** Hold frames until web fonts are ready for canvas-painted Bengali signage. */
+/** Hold frames until web fonts are ready for canvas-painted Bengali signage (2.5s failsafe). */
 export function useFontReady(): boolean {
   const [ready, setReady] = useState(false);
   useEffect(() => {
     const handle = delayRender('bengali-fonts');
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      setReady(true);
+      continueRender(handle);
+    };
+    const timer = setTimeout(finish, 2500);
     const links = Array.from(document.querySelectorAll('style'))
       .map((s) => s.textContent ?? '')
       .join(' ');
@@ -153,10 +167,15 @@ export function useFontReady(): boolean {
       Array.from(new Set(wants)).map((fam) =>
         document.fonts.load(`700 40px ${fam.startsWith("'") ? fam : `'${fam}'`}`).catch(() => null),
       ),
-    ).then(() => {
-      setReady(true);
-      continueRender(handle);
-    });
+    )
+      .then(() => {
+        clearTimeout(timer);
+        finish();
+      })
+      .catch(() => {
+        clearTimeout(timer);
+        finish();
+      });
   }, []);
   return ready;
 }
