@@ -8,9 +8,9 @@ _Updated: 2026-11-26. This file is the execution report (master prompt §19). It
 |---|-----------|--------|-------|
 | 1 | GitHub repo + Actions pipeline | ✅ DONE | `testivao5-lab/lobhi-mutton-handi-animation`, public, workflows: validate / preview-render / scene-render / final-assembly |
 | 2 | Story & scene breakdown (90 shots) | ✅ DONE | `src/data/shots.part{1,2}.json` — full dialogue transcribed; storyboard-estimate timing |
-| 3 | Character design concepts (leads) | ⏳ AWAITING APPROVAL | Model sheet pairs were shown; owner skipped selection — design direction being re-confirmed |
+| 3 | Character design concepts (leads) | ✅ OWNER-APPROVED (3/11) | Bolai, Champa, Fatik locked (v1). Remaining 8 roles + crowd next round |
 | 4 | Voice auditions | ✅ OWNER-APPROVED & LOCKED | Round 1 rejected (robotic); rounds 2–4: all 12 roles owner-selected. See docs/voice-bible.md + src/config/voices.ts |
-| 5 | First animation test clip | 🔜 QUEUED | Rendered on GitHub Actions **after** design approvals |
+| 5 | First animation test clip | 🏗 IN PROGRESS | TestClip composition built (walk/expressions/lip-sync w/ locked Bolai voice); rendering on GitHub Actions |
 | 6 | Backgrounds & props | 🔜 PENDING | After design approvals |
 | 7 | Full scene production | 🔜 PENDING | After test-clip approval |
 | 8 | Final assembly + QC + release | 🔜 PENDING | |

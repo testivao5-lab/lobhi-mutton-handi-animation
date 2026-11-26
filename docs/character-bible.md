@@ -6,10 +6,12 @@ Designs are locked. Any change (including costume changes required by the story)
 
 | Character | Design sheet | Approval |
 |---|---|---|
-| C01 Bolai | presented (model sheet v1) | ⏳ pending owner pick |
-| C02 Champa | presented (model sheet v1) | ⏳ pending owner pick |
-| C05 Fatik | presented (model sheet v1) | ⏳ pending owner pick |
+| C01 Bolai | v1 (`public/characters/design/bolai-model-sheet-v1.png`) | ✅ **OWNER-APPROVED — LOCKED** |
+| C02 Champa | v1 (`public/characters/design/champa-model-sheet-v1.png`) | ✅ **OWNER-APPROVED — LOCKED** |
+| C05 Fatik | v1 (`public/characters/design/fatik-model-sheet-v1.png`) | ✅ **OWNER-APPROVED — LOCKED** |
 | C03 Subol, C04 Tapan, C06 Soumen, C07 Bhavesh, C08 Prabhat, C09 Raybabu, C10 Daroga, C11 Food Officer, crowd variants | to be presented next round | ⏳ pending |
+
+Note (known sheet artifact, recorded for honesty): Bolai v1's expression-row heads show grey-ish hair in some tiles; the lock is the front/side/three-quarter/back views + palette. Rigs (src/components/characters/Bolai.tsx) use black hair per the approved views.
 
 ## Locked specifications
 
