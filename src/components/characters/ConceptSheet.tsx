@@ -279,11 +279,11 @@ function BackView({s}: {s: ConceptSpec}) {
 
 const FaceCU: React.FC<{s: ConceptSpec; cx: number; cy: number}> = ({s, cx, cy}) => (
   <g>
-    <circle cx={cx} cy={cy} r={86} fill="#FBF3E2" stroke={INK} strokeWidth={3.4} />
-    <g transform={`translate(${cx} ${cy}) scale(2.05)`}>
+    <circle cx={cx} cy={cy} r={70} fill="#FBF3E2" stroke={INK} strokeWidth={3.4} />
+    <g transform={`translate(${cx} ${cy}) scale(1.62)`}>
       <Face s={s} x={0} y={0} sc={1} shift={0} />
     </g>
-    <text x={cx} y={cy + 108} textAnchor="middle" fontSize={15} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">
+    <text x={cx} y={cy + 88} textAnchor="middle" fontSize={14} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">
       মুখের ক্লোজ-আপ
     </text>
   </g>
@@ -319,20 +319,20 @@ export const DirectionPanel: React.FC<{s: ConceptSpec; x: number; y: number}> = 
     <text x={400} y={382} textAnchor="middle" fontSize={15} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">তিন-চতুর্থাংশ</text>
     <text x={120} y={700} textAnchor="middle" fontSize={15} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">পাশ</text>
     <text x={400} y={700} textAnchor="middle" fontSize={15} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">পেছন</text>
-    <FaceCU s={s} cx={452} cy={800} />
+    <FaceCU s={s} cx={458} cy={822} />
     {/* palette chips */}
     {s.palette.map((p, i) => (
-      <g key={i} transform={`translate(${28 + i * 100} 782)`}>
-        <rect x={0} y={0} width={88} height={52} rx={8} fill={p.hex} stroke={INK} strokeWidth={2.6} />
-        <text x={44} y={70} textAnchor="middle" fontSize={13.5} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">
+      <g key={i} transform={`translate(${20 + i * 92} 780)`}>
+        <rect x={0} y={0} width={80} height={48} rx={8} fill={p.hex} stroke={INK} strokeWidth={2.6} />
+        <text x={40} y={66} textAnchor="middle" fontSize={13} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">
           {p.name}
         </text>
       </g>
     ))}
-    <text x={22} y={905} fontSize={14.5} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">
+    <text x={22} y={925} fontSize={14.5} fill={INK} fontFamily="'Noto Sans Bengali', sans-serif">
       অনুপাত: {s.heads} · পেট: {Math.round(s.belly * 100)}% · কাঁধ: {s.shoulder * 2}px
     </text>
-    <foreignObject x={16} y={918} width={528} height={84}>
+    <foreignObject x={16} y={938} width={528} height={64}>
       <div style={{fontFamily: "'Noto Sans Bengali', sans-serif", fontSize: 15.5, color: INK, lineHeight: 1.35}}>
         {s.note}
       </div>
