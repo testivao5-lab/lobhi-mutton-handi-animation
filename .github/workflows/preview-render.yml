@@ -38,7 +38,8 @@ jobs:
           if [ -n "${{ github.event.inputs.frames }}" ]; then
             ARGS="--frames=${{ github.event.inputs.frames }}"
           fi
-          npx remotion render "${{ github.event.inputs.composition }}" "out/${{ github.event.inputs.composition }}.mp4" $ARGS
+          # swiftshader = software WebGL on the GPU-less runner (three.js worlds)
+          npx remotion render "${{ github.event.inputs.composition }}" "out/${{ github.event.inputs.composition }}.mp4" $ARGS --gl=swiftshader --concurrency=2 --timeout=120000
 
       - name: Verify output
         run: |

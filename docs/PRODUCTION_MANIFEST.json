@@ -1,0 +1,13 @@
+{
+  "project": "লোভী মটন হান্ডি ওয়ালা (Lobhi Mutton Handi Wala)",
+  "version": "v5-styletest",
+  "git_commit": "SEE RENDER_REPORT + backups",
+  "spec": {"resolution": "1920x1080", "fps": 24, "aspect": "16:9", "video": "H.264", "audio": "AAC 48kHz", "duration_target_min": 13.0, "duration_target_max": 14.0, "subtitles": "separate SRT, never burned"},
+  "style": "SKILL.md house style: procedural 3D worlds + 2D flat-shaded cast, ink #351f22, 3-band toon, moving camera",
+  "rules": ["NO generative AI images ever", "Remotion+three code-based only", "cloud-only rendering (GitHub Actions)", "VO timing master", "owner approval gates"],
+  "scenes": {"count": 15, "shots": 90, "frames": 19440, "render_status": "not_started", "scene_modules": "src/compositions/scenes (to build)"},
+  "workflows": ["validate.yml", "preview-render.yml", "scene-render.yml (chunk matrix pending)", "final-assembly.yml", "character-previews.yml (pending)", "environment-previews.yml (pending)"],
+  "qc": {"tsc": "pass", "stills": "pending", "contact_sheet": "pending", "full_video": "not_applicable_yet"},
+  "approvals": {"voices": "LOCKED 12/12", "design_attributes": "approved-as-spec", "test_style_v5": "PENDING"},
+  "backup": {"drive_root": "1VH_pNOI0t3_50hNv6YGDFqc5Afd30FYs", "manifest": "docs/backup-manifest.json"}
+}
