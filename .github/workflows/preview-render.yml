@@ -39,7 +39,7 @@ jobs:
             ARGS="--frames=${{ github.event.inputs.frames }}"
           fi
           # software WebGL on the GPU-less runner: ANGLE+SwiftShader + Chrome137+ opt-in flag
-          npx remotion render "${{ github.event.inputs.composition }}" "out/${{ github.event.inputs.composition }}.mp4" $ARGS --gl=swangle --chromium-flags=--enable-unsafe-swiftshader --concurrency=2 --timeout=120000
+          npx remotion render "${{ github.event.inputs.composition }}" "out/${{ github.event.inputs.composition }}.mp4" $ARGS --gl=swangle --chromium-flags='{"enable-unsafe-swiftshader": true}' --concurrency=2 --timeout=120000
 
       - name: Verify output
         run: |
