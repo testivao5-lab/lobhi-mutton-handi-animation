@@ -7,9 +7,8 @@
 | 45786988312 | TestClip v3 | ❌ | — | missing sprite (fixed d873be4) |
 | 45787323971 | TestClip v3 | ✅ | ~90s | AI-painted (purged later) |
 | 45796850300 | TestClip v4 | ✅ | ~90s | pure-code 2D |
-| (this dispatch) | StyleTest v5 | ⏳ | TBD | FIRST three.js software-WebGL render → benchmark |
+| 45803137836 | StyleTest v5 | ✅ | 510s total | FIRST three.js software-WebGL render. 288 frames @1080p ≈ **1.7 s/frame** wall incl. setup+encode (2 workers, SwiftShader). Extrapolated full film (19,440 fr): ≈ 9.2 GPU-h wall → feasible as ~15 scene-chunk matrix jobs @ ≈ 40 min each. |
 
 ## Runner compute facts (honest, ADDENDUM §8H)
 - ubuntu-latest: 4 vCPU, 16 GB RAM, NO GPU. WebGL via SwiftShader (software).
-- Benchmark from StyleTest v5 run to be recorded here (s/frame at 1080p) → drives chunking strategy
-  for the 19,440-frame film (target: matrix-parallel scene chunks, npm cache, artifacts).
+- Chrome Headless Shell 158 + `--gl=swangle` + `{"enable-unsafe-swiftshader": true}` = working software-WebGL recipe (documented for all scene renders).
