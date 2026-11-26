@@ -1,0 +1,48 @@
+name: Still Frame Check
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: 'Composition id (e.g. StyleTest)'
+        required: true
+        default: 'StyleTest'
+      frames:
+        description: 'Comma-separated beat frames'
+        required: false
+        default: '0,48,96,144,192,240,287'
+
+permissions:
+  contents: read
+
+jobs:
+  stills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Ensure headless browser
+        run: npx remotion browser ensure
+
+      - name: Render stills
+        run: |
+          mkdir -p stills
+          IFS=',' read -ra FS <<< "${{ github.event.inputs.frames }}"
+          for F in "${FS[@]}"; do
+            npx remotion still "${{ github.event.inputs.composition }}" "stills/f${F}.png" --frame="$F" --scale=0.5 --gl=swangle --chromium-flags='{"enable-unsafe-swiftshader": true}' --timeout=120000
+          done
+          ls -la stills/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stills-${{ github.event.inputs.composition }}
+          path: stills/*.png
+          if-no-files-found: error
